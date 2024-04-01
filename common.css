@@ -1,0 +1,279 @@
+:root{
+    --primary: #A7DCFE;
+    --secondary: #6DC6FE;
+    --lightAccentV1: #EDEDED;
+    --lightAccentV2: #D8EFFF;
+    --lightAccentV3: rgb(0, 102, 255);
+    --darkAccentV1: #C0C0C0;
+    --darkAccentV2: #D8EFFF;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    width: 100%;
+    min-height: 23vh;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background-color: white;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.containerHeader{
+    min-height: 10vh;
+    border-radius: 25px;
+    margin: 20px 40px;
+    padding: 0.5vh 6vh;
+    background-color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#myRTB-logo{
+    width: 130px;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+#myRTB-logo img{
+    height: 45px;
+}
+#myRTB-logo p{
+    font-size: 45px;
+    font-family: 'Truculenta';
+    color: white;
+}
+#user-info{
+    width: 250px;
+    height: 100%;
+    /* display: flex; */
+    display: none;
+}
+#user-pic{
+    width: 80px;
+    display: flex;
+    align-items: center;
+}
+#user-info img{
+    width: 100%;
+    clip-path: circle(50% at 50% 50%);
+}
+#user-profile{
+    padding-left: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#user-name{
+    position: fixed;
+    top: 25px;
+}
+#user-name p{
+    font-family: 'Arya', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+.user-status{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+}
+#user-status p{
+    font-family: 'CormorantGaramond' !important;
+    font-weight: lighter !important;
+    font-style: italic !important;
+    font-size: 15px !important;
+}
+#btn-status{
+    margin-left: 5px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--lightAccentV3);
+    background-color: var(--lightAccentV2);
+    border: none;
+    border-radius: 4px;
+    padding: 3px;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+.loginContainer{
+    width: 125px;
+    height: 45px;
+}
+#btn-login{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: var(--lightAccentV3);
+    background-color: var(--lightAccentV2);
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 3px 5px 0px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+/* NAVBAR */
+.navBar{
+    width: 100%;
+    padding-bottom: 20px;
+}
+.navBar ul{
+    display: flex;
+    padding: 0 5%;
+    justify-content: space-evenly;
+}
+.navBar li{
+    display: flex;
+    /* width: 150px; */
+    width: 12%;
+    justify-content: center;
+    background-color: var(--lightAccentV1);
+    padding: 5px 25px;
+    border-radius: 13px;
+    box-shadow: 5px 5px 4px 0 rgba(0,0,0,0.4);
+}
+.navBar li:hover{
+    background-color: var(--darkAccentV2);
+    cursor: pointer;
+}
+.navBar a{
+    color: black;
+    text-decoration: none;
+    font-family: 'Truculenta';
+    font-size: 25px;
+    text-align: center;
+}
+#nav-fasilitas,
+#nav-formulir{
+    position: relative !important;
+    display: inline-block !important;
+}
+#nav-fasilitas button,
+#nav-formulir button{
+    border: none;
+}
+#nav-fasilitas img,
+#nav-formulir img{
+    width: 20px;
+    height: 18px;
+}
+.btnTriangle{
+    filter: hue-rotate(90deg);
+}
+.wrapperLinks{
+    display: flex;
+    text-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.dropdownNav{
+    visibility: collapse;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 0.5rem;
+    z-index: 2;
+    transition: visibility ease-in-out 0.1s;
+}
+.btnDrop{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+.dropdown li{
+    display: flex;
+    justify-content: flex-start;
+}
+.dropdown li a{
+    text-decoration: none;
+    display: block !important;
+}
+#drop-fasilitas{
+    left: 325px;
+}
+#drop-fasilitas li{
+    width: 180px;
+}
+#drop-forms{
+    left: 585px;
+}
+#drop-forms li{
+    width: 280px;
+}
+
+/* HELP BUTTON */
+.helpFAQ{
+    position: fixed;
+    z-index: 9999;
+    right: 30px;
+    bottom: 100px;
+    width: 40px;
+    height: 40px;
+}
+.btnHelp{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    border: none;
+    background-color: black;
+    color: var(--lightAccentV1);
+    font-family: 'Truculenta';
+    font-size: 28px;
+    font-weight: bolder;
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    transition: all ease-in-out 0.5s;
+    cursor: pointer;
+}
+.btnHelp:hover{
+    background-color: var(--lightAccentV2);
+    color: black;
+    transition: all ease-in-out 0.25s;
+}
+
+/* FOOTER */
+.footer{
+    width: 100%;
+    min-height: 12vh;
+    bottom: 0;
+}
+.shapeFooter{
+    height: 100%;
+    border-radius: 25px;
+    background-color: var(--lightAccentV1);
+    margin: 10px 40px;
+}
+.containerFooter{
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 50px;
+}
+.containerFooter h4{
+    font-family: 'Truculenta';
+    font-weight: normal;
+    font-size: 25px;
+}
+.containerInFooter{
+    display: flex;
+    justify-content: flex-end;
+    width: 500px;
+    gap: 10px;
+}
+.sosmedIcons{
+    height: 50px;
+}
+.sosmedIcons img{
+    width: 100%;
+    height: 100%;
+}
+.conFirst{
+    display: flex;
+    justify-content: flex-start;
+}
