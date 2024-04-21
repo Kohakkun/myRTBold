@@ -1,0 +1,326 @@
+:root{
+    --primary: #A7DCFE;
+    --secondary: #6DC6FE;
+    --lightAccentV1: #EDEDED;
+    --lightAccentV2: #D8EFFF;
+    --lightAccentV3: rgb(0, 102, 255);
+    --darkAccentV1: #C0C0C0;
+    --darkAccentV2: #D8EFFF;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+h3{
+    font-size: 70px;
+    font-family: 'Yrsa';
+    font-weight: 400;
+    text-align: center;
+    padding: 10px 0px;
+}
+.mainCol{
+    margin-top: 25vh;
+    width: 100%;
+}
+.shapeMainCol{
+    margin: 20px 40px;
+    padding: 30px 30px;
+    height: 100%;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 25px;
+}
+.containerMain{
+    width: 100%;
+    height: auto;
+}
+/* JUMBOTRON */
+.jumbotron{
+    width: 100%;
+    height: 80vh;
+    border-radius: 25px;
+    margin-bottom: 25px;
+}
+.slider{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    width: max-content;
+    transition: 1s;
+    gap: 50px;
+}
+.list img{
+    border-radius: 25px;
+    width: 91vw;
+    height: 100%;
+    object-fit: cover;
+}
+.itemTopView img{
+    object-position: top;
+}
+.itemMidTopView img{
+    object-position: 0px -400px;
+}
+/* EVENT SEBELUMNYA */
+.eventSebelumnya{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 55vh;
+}
+.rowGallery{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+}
+.containerEventImg{
+    width: 32.5%;
+    height: 100%;
+}
+.containerEventImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+/* FASILITAS TREE */
+.treeFasilitas{
+    width: 100%;
+    height: 300vh;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+.treeFasilitas h4{
+    font-size: 35px;
+    font-family: 'Arya';
+}
+.timeline{
+    margin-top: 0px;
+    margin-bottom: 40px;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    transition: all 2s ease-in-out;
+}
+.timeline:before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 5px;
+    border-radius: 10px;
+    height: 100%;
+    background: var(--secondary);
+}
+.timeline ul{
+    margin: 0;
+    padding: 0;
+    transition: inherit;
+}
+.timeline ul li{
+    list-style: none;
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    transition: inherit;
+}
+.timeline ul li:nth-child(odd){
+    float: left;
+    text-align: left;
+    clear: both;
+}
+.timeline ul li:nth-child(even){
+    float: right;
+    left: 5px;
+    text-align: left;
+    clear: both;
+}
+.content{
+    display: none;
+    border: none;
+    padding: 20px 10px 10px 10px;
+    margin-bottom: 30px;
+    border-radius: 35px;
+    background-color: var(--secondary);
+    text-align: justify;
+    transition: inherit;
+}
+.timeline ul li:nth-child(odd):before{
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: -20px;
+    width: 35px;
+    height: 35px;
+    background: orange;
+    border-radius: 50%;
+    box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.5);
+    transition: inherit;
+}
+.timeline ul li:nth-child(even):before{
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: -20px;
+    width: 35px;
+    height: 35px;
+    background-color: var(--secondary);
+    background: orange;
+    border-radius: 50%;
+    box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.5);
+    transition: inherit;
+}
+.timeline ul li:nth-child(2),
+.timeline ul li:nth-child(3),
+.timeline ul li:nth-child(4),
+.timeline ul li:nth-child(5){
+    margin-top: 70px;
+    transition: inherit;
+}
+.timeline ul li .floor{
+    cursor: pointer;
+}
+.timeline ul li:nth-child(odd) .floor{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    top: 15px;
+    right: -165px;
+    margin: 0;
+    padding: 8px 16px;
+    background-color: #0066FF;
+    color: white;
+    border-radius: 30px;
+    font-family: 'Arya';
+    font-size: 22px;
+    transition: inherit;
+}
+.timeline ul li:nth-child(5) .floor{
+    right: -175px;
+    transition: inherit;
+}
+.timeline ul li:nth-child(even) .floor{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 10px;
+    top: 15px;
+    left: -165px;
+    margin: 0;
+    padding: 8px 16px;
+    background-color: #0066FF;
+    color: white;
+    font-family: 'Arya';
+    border-radius: 30px;
+    font-size: 22px;
+    transition: inherit;
+}
+.containerContent{
+    height: 100%;
+    padding: 0px 10px;
+}
+.facilityImg{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 3dvh;
+}
+.facilityImg img{
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    border-radius: 25px;
+}
+.containerContentInner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.containerContentInner button{
+    width: 95px;
+    height: 40px;
+    border-radius: 35px;
+    border: none;
+    font-family: 'Truculenta';
+    font-size: 22px;
+}
+.triangleLeft{
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 20px solid var(--secondary);
+    border-bottom: 10px solid transparent;
+}
+.triangleRight{
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 20px solid var(--secondary);
+    border-bottom: 10px solid transparent;
+}
+.clearance{
+    clear: both;
+}
+/* GALLERY ALL EVENTS */
+.galleryEvents{
+    width: 100%;
+    height: 100vh;
+}
+#gallery-all-events{
+    width: 100%;
+    height: 85%;
+}
+.wrapperColGallery{
+    width: 23%;
+    height: 100%;
+}
+.oddCG{
+    display: flex;
+    align-items: flex-start;
+}
+.evenCG{
+    display: flex;
+    align-items: flex-end;
+}
+.colGallery{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.containerAllEvent{
+    width: 100%;
+    height: 48%;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.containerAllEvent img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}
+.resizeImage img{
+    width: 250%;
+    height: 100%;
+    transform: translateX(-220px);
+}
