@@ -1,0 +1,332 @@
+:root {
+  --primary: #a7dcfe;
+  --secondary: #6dc6fe;
+  --lightAccentV1: #ededed;
+  --lightAccentV2: #d8efff;
+  --lightAccentV3: rgb(0, 102, 255);
+  --darkAccentV1: #c0c0c0;
+  --darkAccentV2: #d8efff;
+}
+
+.btnkios {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #ffffff;
+  margin-right: 100px; /* Adjust margin to position it next to the "Detail" button */
+  float: right;
+  margin-left: 10px;
+  margin-right: 100px;
+  width: 143px;
+  text-align: center;
+}
+
+.btnkios:hover {
+  background-color: var(--lightAccentV2);
+  color: black;
+  transition: all ease-in-out 0.25s;
+}
+
+/* isi HTML*/
+.mainCol{
+  width: 100%;
+  margin-top: 25vh;
+}
+
+/* .container{
+  padding: 3rem 0;
+} */
+
+.box {
+  display: inline-block;
+  width: 24px;
+  height: 25px;
+  background-color: #00ff75;
+  margin-right: 10px;
+  margin-top: 15px;
+  margin-left: 10px;
+  border-radius: 3px;
+}
+
+.background {
+  top: 0;
+  left: 0;
+  height: calc(auto - 1px);
+  background-color: #6dc6fe;
+  z-index: 0;
+  border-radius: 25px;
+  position: relative;
+  margin: 20px 40px;
+  padding: 30px 30px;
+  background-size: cover;
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4 {
+  color: #000;
+  text-align: justify;
+  font-family: "Truculenta";
+  font-size: 50px;
+  font-style: normal;
+  line-height: normal;
+  padding-top: 10px;
+  margin-left: 10px;
+}
+
+.btnpeminjaman {
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #ffffff;
+  margin-left: 10px;
+  text-decoration: none;
+  text-align: center;
+  width: 143px;
+}
+
+.btnpeminjaman:hover {
+  background-color: var(--lightAccentV2);
+  color: black;
+  transition: all ease-in-out 0.25s;
+}
+
+.btndetail {
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #ffffff;
+  margin-left: 10px;
+  text-decoration: none;
+  text-align: center;
+  width: 143px;
+}
+
+.btndetail:hover {
+  background-color: var(--lightAccentV2);
+  color: black;
+  transition: all ease-in-out 0.25s;
+}
+
+.main-content p {
+  font-size: 35px;
+  display: flex;
+  font-family: "Truculenta";
+  margin-right: 270px;
+  margin-left: 10px;
+}
+
+.Kios_Talenta {
+  width: 100%;
+}
+.imgkios {
+  width: 50%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.imgkios img {
+  width: 500px;
+  height: 425px;
+  border-radius: 40px;
+  box-sizing: border-box;
+  float: left;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.kiospg {
+  text-align: justify;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.Ruang_Serba_Guna {
+  width: 100%;
+}
+
+.sergunimg {
+  width: 95%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.sergunimg img {
+  width: 500px;
+  height: auto;
+  padding: 10px;
+  box-sizing: border-box;
+  float: right; /* Align images to the right */
+  border-radius: 40px;
+  margin-left: 10%;
+  margin-top: 10px;
+}
+
+.sergun {
+  text-align: justify;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10%;
+}
+
+.btnsergun {
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  float: right;
+}
+
+.Ruang_Dapur {
+  width: 100%;
+  margin-top: 15%;
+}
+
+.dapurimg {
+  width: 95%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 10%;
+}
+
+.dapurimg img {
+  width: 500px;
+  height: 355px;
+  border-radius: 40px;
+  box-sizing: border-box;
+  float: left;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.dapur {
+  text-align: justify;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10%;
+}
+
+.btndapur {
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  float: right;
+}
+
+.Communal {
+  width: 100%;
+  margin-top: 10%;
+}
+
+.communalimg {
+  width: 95%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.communalimg img {
+  width: 500px;
+  height: 400px;
+  padding: 10px;
+  box-sizing: border-box;
+  float: right;
+  border-radius: 40px;
+  margin-left: 10%;
+  margin-top: 10px;
+}
+
+.communalteks {
+  text-align: justify;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10%;
+}
+
+.btncommunal {
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  float: right;
+}
+
+.CO-Working_Space {
+  width: 100%;
+  margin-top: 10%;
+}
+
+.coworkingimg {
+  width: 95%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.coworkingimg img {
+  width: 500px;
+  height: 400px;
+  border-radius: 40px;
+  box-sizing: border-box;
+  float: left;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.coworkingtext {
+  text-align: justify;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10%;
+}
+
+.btncoworking {
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  float: right;
+}
+
+.Ruang_Cuci_Jemur {
+  width: 100%;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.cucijemurimg {
+  width: 95%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.cucijemurimg img {
+  width: 500px;
+  height: 400px;
+  padding: 10px;
+  box-sizing: border-box;
+  float: right; /* Align images to the right */
+  border-radius: 40px;
+  margin-left: 10%;
+  margin-top: 10px;
+}
+
+.cucijemurtext {
+  text-align: justify;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10%;
+}
+
+.btncucijemur {
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  float: right;
+}
