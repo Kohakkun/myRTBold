@@ -1,0 +1,574 @@
+:root {
+  --primary: #a7dcfe;
+  --secondary: #6dc6fe;
+  --lightAccentV1: #ededed;
+  --lightAccentV2: #d8efff;
+  --lightAccentV3: rgb(0, 102, 255);
+  --darkAccentV1: #c0c0c0;
+  --darkAccentV2: #d8efff;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  width: 100%;
+  min-height: 23vh;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: white;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.containerHeader {
+  min-height: 10vh;
+  border-radius: 25px;
+  margin: 20px 40px;
+  padding: 0.5vh 6vh;
+  background-color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#myRTB-logo {
+  width: 130px;
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+#myRTB-logo img {
+  height: 45px;
+}
+#myRTB-logo p {
+  font-size: 45px;
+  font-family: "Truculenta";
+  color: white;
+}
+#user-info {
+  width: 250px;
+  height: 100%;
+  display: flex;
+}
+#user-pic {
+  width: 80px;
+  display: flex;
+  align-items: center;
+}
+#user-info img {
+  width: 100%;
+  clip-path: circle(50% at 50% 50%);
+}
+#user-profile {
+  padding-left: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#user-name {
+  position: fixed;
+  top: 25px;
+}
+#user-name p {
+  font-family: "Arya", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+}
+.user-status {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+}
+#user-status p {
+  font-family: "CormorantGaramond" !important;
+  font-weight: lighter !important;
+  font-style: italic !important;
+  font-size: 15px !important;
+}
+#btn-status {
+  margin-left: 5px;
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  color: var(--lightAccentV3);
+  background-color: var(--lightAccentV2);
+  border: none;
+  border-radius: 4px;
+  padding: 3px;
+  box-shadow: 0 0px 5px 0px black;
+  cursor: pointer;
+}
+/* NAVBAR */
+.navBar {
+  width: 100%;
+  padding-bottom: 20px;
+  size: cover;
+}
+
+.navBar ul {
+  display: flex;
+  padding: 0 5%;
+  justify-content: space-evenly;
+}
+.navBar li {
+  display: flex;
+  width: 150px;
+  justify-content: center;
+  background-color: var(--lightAccentV1);
+  padding: 5px 25px;
+  border-radius: 13px;
+  box-shadow: 5px 5px 4px 0 rgba(0, 0, 0, 0.4);
+}
+.navBar li:hover {
+  background-color: var(--darkAccentV2);
+  cursor: pointer;
+}
+.navBar a {
+  color: black;
+  text-decoration: none;
+  font-family: "Truculenta";
+  font-size: 25px;
+  text-align: center;
+}
+#nav-fasilitas,
+#nav-formulir {
+  position: relative !important;
+  display: inline-block !important;
+}
+#nav-fasilitas button,
+#nav-formulir button {
+  border: none;
+}
+#nav-fasilitas img,
+#nav-formulir img {
+  width: 20px;
+  height: 18px;
+}
+.btnTriangle {
+  filter: hue-rotate(90deg);
+}
+.wrapperLinks {
+  display: flex;
+  justify-content: space-between;
+}
+.dropdown {
+  visibility: collapse;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 0.5rem;
+  z-index: 2;
+  transition: visibility ease-in-out 0.1s;
+}
+.btnDrop {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+.dropdown li {
+  display: flex;
+  justify-content: flex-start;
+}
+.dropdown li a {
+  text-decoration: none;
+  display: block !important;
+}
+#drop-fasilitas {
+  left: 315px;
+}
+#drop-fasilitas li {
+  width: 180px;
+}
+#drop-forms {
+  left: 570px;
+}
+#drop-forms li {
+  width: 280px;
+}
+/* HELP BUTTON */
+.helpFAQ {
+  position: fixed;
+  z-index: 9999;
+  right: 30px;
+  bottom: 100px;
+  width: 40px;
+  height: 40px;
+}
+.btnHelp {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  border: none;
+  background-color: black;
+  color: var(--lightAccentV1);
+  font-family: "Truculenta";
+  font-size: 28px;
+  font-weight: bolder;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+  transition: all ease-in-out 0.5s;
+  cursor: pointer;
+}
+.btnHelp:hover {
+  background-color: var(--lightAccentV2);
+  color: black;
+  transition: all ease-in-out 0.25s;
+}
+
+/* FOOTER */
+.footer {
+  width: 100%;
+  min-height: 12vh;
+  bottom: 0;
+}
+.shapeFooter {
+  height: 100%;
+  border-radius: 25px;
+  background-color: var(--lightAccentV1);
+  margin: 10px 40px;
+}
+.containerFooter {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 50px;
+}
+.containerFooter h4 {
+  font-family: "Truculenta";
+  font-weight: normal;
+  font-size: 25px;
+}
+.containerInFooter {
+  display: flex;
+  justify-content: flex-end;
+  width: 500px;
+  gap: 10px;
+}
+.sosmedIcons {
+  height: 50px;
+}
+.sosmedIcons img {
+  width: 100%;
+  height: 100%;
+}
+.conFirst {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.btnkios {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #ffffff;
+  margin-right: 100px; /* Adjust margin to position it next to the "Detail" button */
+  float: right;
+  margin-left: 10px;
+  margin-right: 100px;
+  width: 143px;
+  text-align: center;
+}
+
+.btnkios:hover {
+  background-color: var(--lightAccentV2);
+  color: black;
+  transition: all ease-in-out 0.25s;
+}
+
+/* isi HTML*/
+.box {
+  display: inline-block;
+  width: 24px;
+  height: 25px;
+  background-color: #00ff75;
+  margin-right: 10px;
+  margin-top: 15px;
+  margin-left: 10px;
+  border-radius: 3px;
+}
+
+.background {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(auto - 1px);
+  background-color: #6dc6fe;
+  z-index: 0;
+  border-radius: 25px;
+  position: relative;
+  margin-top: 200px;
+  padding-top: 25px;
+  padding-bottom: 150px;
+  background-size: cover;
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4 {
+  color: #000;
+  text-align: justify;
+  font-family: "Truculenta";
+  font-size: 50px;
+  font-style: normal;
+  line-height: normal;
+  padding-top: 10px;
+  margin-left: 10px;
+}
+
+.btnpeminjaman {
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #ffffff;
+  margin-left: 10px;
+  text-decoration: none;
+  text-align: center;
+  width: 143px;
+}
+
+.btnpeminjaman:hover {
+  background-color: var(--lightAccentV2);
+  color: black;
+  transition: all ease-in-out 0.25s;
+}
+
+.btndetail {
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #ffffff;
+  margin-left: 10px;
+  text-decoration: none;
+  text-align: center;
+  width: 143px;
+}
+
+.btndetail:hover {
+  background-color: var(--lightAccentV2);
+  color: black;
+  transition: all ease-in-out 0.25s;
+}
+
+.main-content p {
+  font-size: 35px;
+  display: flex;
+  font-family: "Truculenta";
+  margin-right: 270px;
+  margin-left: 10px;
+}
+
+.Kios_Talenta {
+  width: 100%;
+}
+.imgkios {
+  width: 50%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.imgkios img {
+  width: 500px;
+  height: 425px;
+  border-radius: 40px;
+  box-sizing: border-box;
+  float: left;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.kiospg {
+  text-align: justify;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.Ruang_Serba_Guna {
+  width: 100%;
+}
+
+.sergunimg {
+  width: 95%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.sergunimg img {
+  width: 500px;
+  height: auto;
+  padding: 10px;
+  box-sizing: border-box;
+  float: right; /* Align images to the right */
+  border-radius: 40px;
+  margin-left: 10%;
+  margin-top: 10px;
+}
+
+.sergun {
+  text-align: justify;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10%;
+}
+
+.btnsergun {
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  float: right;
+}
+
+.Ruang_Dapur {
+  width: 100%;
+}
+
+.dapurimg {
+  width: 95%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 10%;
+}
+
+.dapurimg img {
+  width: 500px;
+  height: 355px;
+  border-radius: 40px;
+  box-sizing: border-box;
+  float: left;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.dapur {
+  text-align: justify;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10%;
+}
+
+.btndapur {
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  float: right;
+}
+
+.Communal {
+  width: 100%;
+  margin-top: 10%;
+}
+
+.communalimg {
+  width: 95%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.communalimg img {
+  width: 500px;
+  height: 400px;
+  padding: 10px;
+  box-sizing: border-box;
+  float: right;
+  border-radius: 40px;
+  margin-left: 10%;
+  margin-top: 10px;
+}
+
+.communalteks {
+  text-align: justify;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10%;
+}
+
+.btncommunal {
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  float: right;
+}
+
+.CO-Working_Space {
+  width: 100%;
+  margin-top: 10%;
+}
+
+.coworkingimg {
+  width: 95%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.coworkingimg img {
+  width: 500px;
+  height: 400px;
+  border-radius: 40px;
+  box-sizing: border-box;
+  float: left;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.coworkingtext {
+  text-align: justify;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10%;
+}
+
+.btncoworking {
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  float: right;
+}
+
+.Ruang_Cuci_Jemur {
+  width: 100%;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.cucijemurimg {
+  width: 95%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.cucijemurimg img {
+  width: 500px;
+  height: 400px;
+  padding: 10px;
+  box-sizing: border-box;
+  float: right; /* Align images to the right */
+  border-radius: 40px;
+  margin-left: 10%;
+  margin-top: 10px;
+}
+
+.cucijemurtext {
+  text-align: justify;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10%;
+}
+
+.btncucijemur {
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  float: right;
+}

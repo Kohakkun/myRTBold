@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="aboutUs.css">
+    <script defer src="common.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <section class="containerHeader">
+            <div id="myRTB-logo">
+                <img src="./Logo and Icons/Logo Putih.png">
+                <p>myRTB</p>
+            </div>
+            <div id="user-info">
+                <div id="user-pic"><img src="./home/Foto Profile Admin.png"></div>
+                <div id="user-profile">
+                    <div id="user-name">
+                        <p id="user-name-text">Nama User</p>
+                    </div>
+                    <div class="user-status">
+                        <p>login as</p>
+                        <button id="btn-status">MAHASISWA</button>
+                    </div>
+                </div>
+            </div>
+            <div class="loginContainer" id="login-container">
+                <a href="./login.html"><button id="btn-login">LOGIN</button></a>
+            </div>
+        </section>
+        <!-- NAVIGATION BAR -->
+        <nav class="navBar">
+            <ul>
+                <li>
+                    <div class="containerLinks">
+                        <a href="./index.html" id="link-beranda">BERANDA</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="containerLinks">
+                        <div class="wrapperLinks">
+                            <a href="./fasilitasRTB.html" id="link-fasilitas">FASILITAS</a>
+                            <button class="btnDrop" id="btn-drop-fasilitas"><img class="btnTriangle" src="./Logo and Icons/grey-dropdown.png"></button>
+                        </div>
+                    </div>
+                    <div class="containerDropdown dropdownFasilitas" id="drop-fasilitas">
+                        <div class="containerLinks drop-item-fasilitas"><a href="./fasilitasRTB.html#scrollCws" id="item-fasilitas">CO-WORKING SPACE</a></div>
+                        <div class="containerLinks drop-item-fasilitas"><a href="./fasilitasRTB.html#scrollCuciJemur" id="item-fasilitas">RUANG CUCI JEMUR</a></div>
+                        <div class="containerLinks drop-item-fasilitas"><a href="./fasilitasRTB.html#scrollKomunal" id="item-fasilitas">KOMUNAL</a></div>
+                        <div class="containerLinks drop-item-fasilitas"><a href="./fasilitasRTB.html#scrollSergun" id="item-fasilitas">RUANG SERBA GUNA</a></div>
+                        <div class="containerLinks drop-item-fasilitas"><a href="./fasilitasRTB.html#scrollDapur" id="item-fasilitas">RUANG DAPUR</a></div>
+                        <div class="containerLinks drop-item-fasilitas"><a href="./fasilitasRTB.html#" id="item-fasilitas">KIOS TALENTA</a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="containerLinks" id="container-link-form">
+                        <div class="wrapperLinks">
+                            <a href="./formKerusakan.html" id="link-forms">FORMULIR</a>
+                            <button class="btnDrop" id="btn-drop-forms"><img class="btnTriangle" src="Logo and Icons/grey-dropdown.png"></button>
+                        </div>
+                    </div>
+                    <div class="containerDropdown dropdownForms" id="drop-forms">
+                        <div class="containerLinks drop-item-forms"><a href="./formKerusakan.html" id="item-form-kerusakan">FORM KERUSAKAN RTB</a></div>
+                        <div class="containerLinks drop-item-forms"><a href="./formKeluarMasuk.html" id="item-form-keluar">FORM KELUAR MASUK RTB</a></div>
+                        <div class="containerLinks drop-item-forms"><a href="./formsSIR.html" id="item-form-sir">FORM STAY IN RTB</a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="containerLinks" id="container-link-peminjaman">
+                        <a href="./peminjaman.html" id="link-peminjaman">PEMINJAMAN</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="containerLinks">
+                        <a href="./aboutUs.html" id="link-tentangkami">TENTANG KAMI</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- MAIN CONTENT -->
+    <main class="mainCol">
+       <div class="shapeMainCol">
+            <div class="container">
+                <div class="TentangKami">
+                    <div class="font">
+                        <h1>TENTANG KAMI</h1>
+                    </div>
+                    <div style="display: flex; align-items: left;">
+                    <div class="image">
+                        <img src="home/Foto RTB.jpg" width="380" height="380" alt="deskripsi gambar">
+                    </div>
+                    <div class="font2">
+                        <p>BCA bekerja sama dengan PT Sentral Layanan Prima (SLP), 
+                            perusahaan milik Dana Pensiun BCA dan PT Dana Purna Investama untuk membangun asrama 
+                            bagi penerima Beasiswa PPBP & PPTI BCA yang dinamakan Rumah Talenta BCA. 
+                            BCA ingin membantu peserta didik agar dapat menjangkau jtempat belajar tanpa harus menjangkau jarak yang jauh. 
+                            Terlebih, transportasi umum yang melintas di daerah Sentul City sangat jarang. 
+                            Selain itu, peserta didik diharapkan dapat fokus pada kegiatan belajarnya 
+                            dengan fasilitas belajar dan peristirahatan yang lengkap.</p>
+                    </div>
+                </div>
+                <div class="font">
+                    <h1>PIC RUMAH TALENTA BCA</h1>
+                </div>
+                <div class="imgPic">
+                    <div class="containerPIC">
+                        <div class="imgPIC">
+                            <img src="aboutUs/Iwan.JPG">
+                        </div>
+                        <div class="containerNama">
+                            <p class="namaPIC">Tono</p>
+                        </div>
+                        <p class="statusPIC">PENGELOLA</p>
+                    </div>
+                    <div class="containerPIC">
+                        <div class="imgPIC">
+                            <img src="aboutUs/Oxy.JPG">
+                        </div>
+                        <div class="containerNama">
+                            <p class="namaPIC">Tini</p>
+                        </div>
+                        <p class="statusPIC">PENGELOLA</p>
+                    </div>
+                    <div class="containerPIC">
+                        <div class="imgPIC">
+                            <img src="aboutUs/Staff (2).JPG">
+                        </div>
+                        <div class="containerNama">
+                            <p class="namaPIC">Toto</p>
+                        </div>
+                        <p class="statusPIC">ADMIN/STAFF</p>
+                    </div>
+                </div>
+                <div class="timRtb">
+                    <div class="fontTim">
+                        <h1>TIM PENGEMBANG myRTB</h1>
+                    </div>
+                    <img src="home/myRTB Developer.jpg">
+                    <div class="fontTim2">
+                        <h1>PPTI 17</h1>
+                    </div>
+                    <div class="fontAlign">
+                        <div class="fontTim3">
+                            <p>Olivio Leoartha <br/>
+                            Hansen Gunawan<br/>
+                            William Valerie<br/>
+                            Devi Paramita<br/>
+                            Monica Agustina Chandra</p>
+                        </div>
+                        <div class="fontTim4">
+                            <p>(2702363544)<br/>
+                            (2702363430)<br/>
+                            (2702363632)<br/>
+                            (2702363380)<br/>
+                            (2702363512)</p>
+                        </div>
+                    </div>
+                    <div class="logoSLP">
+                        <img src="aboutUs/SLP.png" width="900px" height="440px">
+                    </div>
+                    <div class="Map">
+                        <!-- <img src="aboutUs/Map.png" width="1270px" height="950px"> -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.467344808348!2d106.87980577500315!3d-6.588684864407497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c7ff4c5bd601%3A0xbaf218b456b897e4!2sRumah%20Talenta%20BCA!5e0!3m2!1sid!2sid!4v1713629554347!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="sosmedDanAlamat">
+                        <div class="sosmed">
+                            <div class="sosmedItem">
+                                <img src="./Logo and Icons/Facebook.png">
+                                <h3>Ninu_Ninu</h3>
+                            </div>
+                            <div class="sosmedItem">
+                                <img src="./Logo and Icons/x.png">
+                                <h3>ninu_ninu</h3>
+                            </div>
+                            <div class="sosmedItem">
+                                <img src="./Logo and Icons/Instagram.png">
+                                <h3>ninu_ninu</h3>
+                            </div>
+                        </div>
+                        <div class="alamat">
+                            <h2>ALAMAT:</h2>
+                            <p>Jalan Pakuan Nomor 3, Sumur Batu,</br>
+                                Kecamatan Babakan Madang, </br>
+                                Kabupaten Bogor, Jawa Barat </br>
+                                Kode Pos : 16810</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FLOATING HELP BUTTON -->
+    <section class="helpFAQ">
+        <a href="./supportAI.html"><button class="btnHelp">?</button></a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="shapeFooter">
+            <div class="containerFooter">
+                <div class="containerInFooter conFirst">
+                    <h4>copyrights©2024 Reserved by NINU NINU</h4>
+                </div>
+                <div class="containerInFooter">
+                    <h4>rtbmyadmin@ninuninu.co.id</h4>
+                </div>
+                <div class="containerInFooter">
+                    <div class="sosmedIcons">
+                        <img src="Logo and Icons/Facebook.png" id="fb-icon">
+                    </div>
+                    <div class="sosmedIcons">
+                        <img src="Logo and Icons/x.png" id="x-icon">
+                    </div>
+                    <div class="sosmedIcons">
+                        <img src="Logo and Icons/Instagram.png" id="instagram-icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fasilitas RTB</title>
+    <link rel="stylesheet" href="./Fasilitas/fasilitasStyle.css" />
+    <link rel="stylesheet" href="./common.css" />
+    <script defer src="common.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Truculenta:opsz,wght@12..72,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="fasilitasRTB.js"></script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <section class="containerHeader">
+        <div id="myRTB-logo">
+          <img src="./Logo and Icons/Logo Putih.png" />
+          <p>myRTB</p>
+        </div>
+        <div id="user-info">
+          <div id="user-pic"><img src="./home/Foto Profile Admin.png" /></div>
+          <div id="user-profile">
+            <div id="user-name">
+              <p id="user-name-text">Nama User</p>
+            </div>
+            <div class="user-status">
+              <p>login as</p>
+              <button id="btn-status">MAHASISWA</button>
+            </div>
+          </div>
+        </div>
+        <div class="loginContainer" id="login-container">
+          <a href="./login.html"><button id="btn-login">LOGIN</button></a>
+        </div>
+      </section>
+      <!-- NAVIGATION BAR -->
+      <nav class="navBar">
+        <ul>
+          <li>
+            <div class="containerLinks">
+              <a href="./index.html" id="link-beranda">BERANDA</a>
+            </div>
+          </li>
+          <li>
+            <div class="containerLinks">
+              <div class="wrapperLinks">
+                <a href="./fasilitasRTB.html" id="link-fasilitas">FASILITAS</a>
+                <button class="btnDrop" id="btn-drop-fasilitas">
+                  <img
+                    class="btnTriangle"
+                    src="./Logo and Icons/grey-dropdown.png"
+                  />
+                </button>
+              </div>
+            </div>
+            <div
+              class="containerDropdown dropdownFasilitas"
+              id="drop-fasilitas"
+            >
+              <div class="containerLinks drop-item-fasilitas">
+                <a href="./fasilitasRTB.html#scrollCws" id="item-fasilitas"
+                  >CO-WORKING SPACE</a
+                >
+              </div>
+              <div class="containerLinks drop-item-fasilitas">
+                <a
+                  href="./fasilitasRTB.html#scrollCuciJemur"
+                  id="item-fasilitas"
+                  >RUANG CUCI JEMUR</a
+                >
+              </div>
+              <div class="containerLinks drop-item-fasilitas">
+                <a href="./fasilitasRTB.html#scrollKomunal" id="item-fasilitas"
+                  >KOMUNAL</a
+                >
+              </div>
+              <div class="containerLinks drop-item-fasilitas">
+                <a href="./fasilitasRTB.html#scrollSergun" id="item-fasilitas"
+                  >RUANG SERBA GUNA</a
+                >
+              </div>
+              <div class="containerLinks drop-item-fasilitas">
+                <a href="./fasilitasRTB.html#scrollDapur" id="item-fasilitas"
+                  >RUANG DAPUR</a
+                >
+              </div>
+              <div class="containerLinks drop-item-fasilitas">
+                <a href="./fasilitasRTB.html#" id="item-fasilitas"
+                  >KIOS TALENTA</a
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="containerLinks" id="container-link-form">
+              <div class="wrapperLinks">
+                <a href="./formKerusakan.html" id="link-forms">FORMULIR</a>
+                <button class="btnDrop" id="btn-drop-forms">
+                  <img
+                    class="btnTriangle"
+                    src="Logo and Icons/grey-dropdown.png"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="containerDropdown dropdownForms" id="drop-forms">
+              <div class="containerLinks drop-item-forms">
+                <a href="./formKerusakan.html" id="item-form-kerusakan"
+                  >FORM KERUSAKAN RTB</a
+                >
+              </div>
+              <div class="containerLinks drop-item-forms">
+                <a href="./formKeluarMasuk.html" id="item-form-keluar"
+                  >FORM KELUAR MASUK RTB</a
+                >
+              </div>
+              <div class="containerLinks drop-item-forms">
+                <a href="./formsSIR.html" id="item-form-sir"
+                  >FORM STAY IN RTB</a
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="containerLinks" id="container-link-peminjaman">
+              <a href="./peminjaman.html" id="link-peminjaman">PEMINJAMAN</a>
+            </div>
+          </li>
+          <li>
+            <div class="containerLinks">
+              <a href="./aboutUs.html" id="link-tentangkami">TENTANG KAMI</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div class="mainCol">
+      <div class="shapeMainCol">
+        <div class="containerMain">
+          <section id="kios">
+            <div class="containerFasil">
+              <div class="fasilImg">
+                <img src="./Fasilitas/Kios Talenta BCA.jpg" id="kiosRTB-img" />
+              </div>
+              <div class="fasilContent">
+                <div class="fasilInfo">
+                  <h2>Kios Talenta RTB</h2>
+                  <p>Lantai LG- <span class="box"> </span>Status: buka</p>
+                  <br />
+                  <p>
+                    Kios Talenta BCA berada di lantai LG Rumah Talenta BCA. Kios
+                    yang menyediakan segala kebutuhan Mahasiswa PPBP / PPTI BCA
+                    selama pendidikan.
+                  </p>
+                </div>
+                <div class="fasil_buttons">
+                  <span id="scrollSergun"></span>
+                  <a href="#" class="btnFasil btnDetail">DETAIL</a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="sergun">
+            <div class="containerFasil">
+              <div class="fasilContent">
+                <div class="fasilInfo">
+                  <h2>Ruang Serba Guna</h2>
+                  <p>
+                    Lantai LG<br />
+                    Ruang Serba Guna berada di lantai LG Rumah Talenta BCA.
+                    Terdapat fasilitas seperti meja, kursi, WIFI. Ruang ini juga
+                    dapat dipinjam untuk acara kelas.<br />
+                  </p>
+                </div>
+                <div class="fasil_buttons">
+                  <span id="scrollDapur"></span>
+                  <a href="#" class="btnFasil btnPinjam">JADWAL PEMINJAMAN</a>
+                  <a href="#" class="btnFasil btnDetail">DETAIL</a>
+                </div>
+              </div>
+              <div class="fasilImg">
+                <img src="./Fasilitas/Ruang Serbaguna.png" id="sergun-img" />
+              </div>
+            </div>
+          </section>
+          <section id="dapur">
+            <div class="containerFasil">
+              <div class="fasilImg">
+                <img src="./Fasilitas/Ruang Dapur.png" id="dapur-img" />
+              </div>
+              <div class="fasilContent">
+                <div class="fasilInfo">
+                  <h2>Ruang Dapur</h2>
+                  <p>
+                    Lantai LG <br />
+                    Ruang dapur berada di lantai LG Rumah Talenta BCA. Terdapat
+                    fasilitas seperti 2 kompor ganda, kulkas, microwave, rice
+                    cooker dan peralatan masak.
+                  </p>
+                </div>
+                <div class="fasil_buttons">
+                  <span id="scrollKomunal"></span>
+                  <a href="#" class="btnFasil btnPinjam">JADWAL PEMINJAMAN</a>
+                  <a href="#" class="btnFasil btnDetail">DETAIL</a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="komunal">
+            <div class="containerFasil">
+              <div class="fasilContent">
+                <div class="fasilInfo">
+                  <h2>Communal 1, 2, 3, 5</h2>
+                  <p>
+                    Lantai 1,2,3,5 <br />
+                    Communal ada di setiap lantai (Lantai 1, 2, 3, dan 5).
+                    Terdapat fasilitas seperti TV, kulkas, microwave, wastafel,
+                    dispenser dan WIFI.
+                  </p>
+                </div>
+                <div class="fasil_buttons">
+                  <span id="scrollCws"></span>
+                  <a href="#" class="btnFasil btnPinjam">JADWAL PEMINJAMAN</a>
+                  <a href="#" class="btnFasil btnDetail">DETAIL</a>
+                </div>
+              </div>
+              <div class="fasilImg">
+                <img src="./Fasilitas/Communal.png" id="komunal-img" />
+              </div>
+            </div>
+          </section>
+          <section id="cws">
+            <div class="containerFasil">
+              <div class="fasilImg">
+                <img src="./Fasilitas/Co-Workingspace.png" id="cws-img" />
+              </div>
+              <div class="fasilContent">
+                <div class="fasilInfo">
+                  <h2>Co-Working Space</h2>
+                  <p>
+                    Lantai 5 <br />
+                    Co-Working Space (CWS) berada di lantai 5 dapat dipinjam
+                    untuk kegiatan belajar bersama/ kelas. Terdapat fasilitas
+                    AC, kulkas, dispenser, dan WIFI
+                  </p>
+                </div>
+                <div class="fasil_buttons">
+                  <span id="scrollCuciJemur"></span>
+                  <a href="#" class="btnFasil btnPinjam">JADWAL PEMINJAMAN</a>
+                  <a href="#" class="btnFasil btnDetail">DETAIL</a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="cuci_jemur">
+            <div class="containerFasil">
+              <div class="fasilContent">
+                <div class="fasilInfo">
+                  <h2>Ruang Cuci Jemur</h2>
+                  <p>
+                    Lantai 5<br />
+                    Ruang Cuci Jemur berada di lantai 5, terdapat fasilitas 5
+                    mesin cuci untuk cowo dan 7 mesin cuci untuk cewe yang dapat
+                    dipinjam sesuai ijin PIC Ruang Cuci Jemur.
+                  </p>
+                </div>
+                <div class="fasil_buttons">
+                  <a href="#" class="btnFasil btnPinjam">JADWAL PEMINJAMAN</a>
+                  <a href="#" class="btnFasil btnDetail">DETAIL</a>
+                </div>
+              </div>
+              <div class="fasilImg">
+                <img
+                  src="./Fasilitas/Ruang Cuci Jemur.png"
+                  id="cuci_jemur-img"
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- FLOATING HELP BUTTON -->
+    <section class="helpFAQ">
+      <a href="./supportAI.html"><button class="btnHelp">?</button></a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="shapeFooter">
+        <div class="containerFooter">
+          <div class="containerInFooter conFirst">
+            <h4>copyrights©2024 Reserved by NINU NINU</h4>
+          </div>
+          <div class="containerInFooter">
+            <h4>rtbmyadmin@ninuninu.co.id</h4>
+          </div>
+          <div class="containerInFooter">
+            <div class="sosmedIcons">
+              <img src="Logo and Icons/Facebook.png" id="fb-icon" />
+            </div>
+            <div class="sosmedIcons">
+              <img src="Logo and Icons/x.png" id="x-icon" />
+            </div>
+            <div class="sosmedIcons">
+              <img src="Logo and Icons/Instagram.png" id="instagram-icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

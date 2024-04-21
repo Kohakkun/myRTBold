@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Stay In RTB</title>
+    <script defer src="forms/formsSIR.js"></script>
+    <link rel="stylesheet" href="forms/formsSIR.css" />
+    <link rel="stylesheet" href="common.css" />
+    <script defer src="common.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Truculenta:opsz,wght@12..72,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <section class="containerHeader">
+        <div id="myRTB-logo">
+          <img src="./Logo and Icons/Logo Putih.png" />
+          <p>myRTB</p>
+        </div>
+        <div id="user-info">
+          <div id="user-pic"><img src="./home/Foto Profile Admin.png" /></div>
+          <div id="user-profile">
+            <div id="user-name">
+              <p id="user-name-text">Nama User</p>
+            </div>
+            <div class="user-status">
+              <p>login as</p>
+              <button id="btn-status">MAHASISWA</button>
+            </div>
+          </div>
+        </div>
+        <div class="loginContainer" id="login-container">
+          <a href="./login.html"><button id="btn-login">LOGIN</button></a>
+        </div>
+      </section>
+      <!-- NAVIGATION BAR -->
+      <nav class="navBar">
+        <ul>
+          <li>
+            <div class="containerLinks">
+              <a href="./index.html" id="link-beranda">BERANDA</a>
+            </div>
+          </li>
+          <li>
+            <div class="containerLinks">
+              <div class="wrapperLinks">
+                <a href="./fasilitasRTB.html" id="link-fasilitas">FASILITAS</a>
+                <button class="btnDrop" id="btn-drop-fasilitas">
+                  <img
+                    class="btnTriangle"
+                    src="./Logo and Icons/grey-dropdown.png"
+                  />
+                </button>
+              </div>
+            </div>
+            <div
+              class="containerDropdown dropdownFasilitas"
+              id="drop-fasilitas"
+            >
+              <div class="containerLinks drop-item-fasilitas">
+                <a href="./fasilitasRTB.html#scrollCws" id="item-fasilitas"
+                  >CO-WORKING SPACE</a
+                >
+              </div>
+              <div class="containerLinks drop-item-fasilitas">
+                <a
+                  href="./fasilitasRTB.html#scrollCuciJemur"
+                  id="item-fasilitas"
+                  >RUANG CUCI JEMUR</a
+                >
+              </div>
+              <div class="containerLinks drop-item-fasilitas">
+                <a href="./fasilitasRTB.html#scrollKomunal" id="item-fasilitas"
+                  >KOMUNAL</a
+                >
+              </div>
+              <div class="containerLinks drop-item-fasilitas">
+                <a href="./fasilitasRTB.html#scrollSergun" id="item-fasilitas"
+                  >RUANG SERBA GUNA</a
+                >
+              </div>
+              <div class="containerLinks drop-item-fasilitas">
+                <a href="./fasilitasRTB.html#scrollDapur" id="item-fasilitas"
+                  >RUANG DAPUR</a
+                >
+              </div>
+              <div class="containerLinks drop-item-fasilitas">
+                <a href="./fasilitasRTB.html#" id="item-fasilitas"
+                  >KIOS TALENTA</a
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="containerLinks" id="container-link-form">
+              <div class="wrapperLinks">
+                <a href="./formKerusakan.html" id="link-forms">FORMULIR</a>
+                <button class="btnDrop" id="btn-drop-forms">
+                  <img
+                    class="btnTriangle"
+                    src="Logo and Icons/grey-dropdown.png"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="containerDropdown dropdownForms" id="drop-forms">
+              <div class="containerLinks drop-item-forms">
+                <a href="./formKerusakan.html" id="item-form-kerusakan"
+                  >FORM KERUSAKAN RTB</a
+                >
+              </div>
+              <div class="containerLinks drop-item-forms">
+                <a href="./formKeluarMasuk.html" id="item-form-keluar"
+                  >FORM KELUAR MASUK RTB</a
+                >
+              </div>
+              <div class="containerLinks drop-item-forms">
+                <a href="./formsSIR.html" id="item-form-sir"
+                  >FORM STAY IN RTB</a
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="containerLinks" id="container-link-peminjaman">
+              <a href="./peminjaman.html" id="link-peminjaman">PEMINJAMAN</a>
+            </div>
+          </li>
+          <li>
+            <div class="containerLinks">
+              <a href="./aboutUs.html" id="link-tentangkami">TENTANG KAMI</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="mainFrame">
+      <form class="main" onsubmit="return check()">
+        <div class="dropdown">
+          <div class="dropbtn">
+            <div class="triangle">
+              <img src="Logo and Icons/grey-dropdown.png" />
+            </div>
+            <div>
+              <p class="btnForm">FORMULIR</p>
+            </div>
+          </div>
+          <div class="dropdown-content" id="myDropdown">
+            <a href="formKerusakan.html" class="formBtn"
+              >FORMULIR KERUSAKAN RTB</a
+            >
+            <a href="formKeluarMasuk.html" class="formBtn"
+              >FORMULIR KELUAR/MASUK RTB</a
+            >
+            <a href="formsSIR.html" class="formBtn">FORMULIR STAY IN RTB</a>
+          </div>
+        </div>
+
+        <div class="sheetPart">
+          <div class="name lpart">
+            <div class="list">
+              <div class="format" id="format1">
+                <p class="form">NAMA</p>
+              </div>
+              <div class="dodot">
+                <p class="form">:</p>
+              </div>
+              <div class="tb">
+                <input type="text" class="generalTB nameTB" />
+              </div>
+            </div>
+            <div class="alert">
+              <p class="alertNameText">*TOLONG ISI NAMA DENGAN BENAR!</p>
+            </div>
+          </div>
+
+          <div class="kelas lpart">
+            <div class="list">
+              <div class="format" id="format2">
+                <p class="form">KELAS</p>
+              </div>
+              <div class="dodot">
+                <p class="form">:</p>
+              </div>
+              <div class="tbClass">
+                <div class="ClassDropbtn">
+                  <div class="triangleClass">
+                    <img src="Logo and Icons/grey-dropdown.png" />
+                  </div>
+                  <div>
+                    <p class="ClassBtnForm">KELAS</p>
+                  </div>
+                </div>
+                <div class="classDropdown-content" id="classMyDropdown">
+                  <div class="classBtn">PPTI 14</div>
+                  <div class="classBtn">PPTI 15</div>
+                  <div class="classBtn">PPTI 16</div>
+                  <div class="classBtn">PPTI 17</div>
+                  <div class="classBtn">PPTI 19</div>
+                  <div class="classBtn">PPTI 18</div>
+                  <div class="classBtn">PPBP 3</div>
+                  <div class="classBtn">PPBP 4</div>
+                  <div class="classBtn">PPBP 5</div>
+                  <div class="classBtn">PPBP 6</div>
+                </div>
+              </div>
+            </div>
+            <div class="alert">
+              <p class="alertClassText">*TOLONG ISI KELAS!</p>
+            </div>
+          </div>
+
+          <div class="facility lpart">
+            <div class="list">
+              <div class="format" id="format4">
+                <p class="form">KAMAR</p>
+              </div>
+              <div class="dodot">
+                <p class="form">:</p>
+              </div>
+              <div class="tb">
+                <input type="text" class="generalTB facilityTB" />
+              </div>
+            </div>
+            <div class="alert">
+              <p class="alertFacilityText">*TOLONG ISI NOMOR KAMAR!</p>
+            </div>
+          </div>
+
+          <div class="location lpart">
+            <div class="list">
+              <div class="format" id="format4">
+                <p class="form">RANGE HARI</p>
+              </div>
+              <div class="dodot">
+                <p class="form">:</p>
+              </div>
+              <div class="tb">
+                <input type="text" class="generalTB locationTB" />
+              </div>
+            </div>
+            <div class="alert">
+              <p class="alertLocationText">*TOLONG ISI RANGE HARI!</p>
+            </div>
+          </div>
+
+          <div class="hari lpart">
+            <div class="list">
+              <div class="format" id="format4">
+                <p class="form">RANGE TANGGAL</p>
+              </div>
+              <div class="dodot">
+                <p class="form">:</p>
+              </div>
+              <div class="tb">
+                <input type="text" class="generalTB hariTB" />
+              </div>
+            </div>
+            <div class="alert">
+              <p class="alertHariText">*TOLONG ISI RANGE TANGGAL!</p>
+            </div>
+          </div>
+
+          <div class="responsible lpart">
+            <div class="list">
+              <div class="format">
+                <p class="form formIjin">KETERANGAN</p>
+              </div>
+              <div class="dodot">
+                <p class="form">:</p>
+              </div>
+              <div class="tbResponsible">
+                <div class="ResponsibleDropbtn">
+                  <div class="triangleResponsible">
+                    <img src="Logo and Icons/grey-dropdown.png" />
+                  </div>
+                  <div>
+                    <p class="ResponsibleBtnForm">PILIH</p>
+                  </div>
+                </div>
+                <div
+                  class="responsibleDropdown-content"
+                  id="responsibleMyDropdown"
+                >
+                  <div class="responsibleBtn">Sakit</div>
+                  <div class="responsibleBtn">Libur Cawu</div>
+                  <div class="responsibleBtn">Lainnya</div>
+                </div>
+              </div>
+            </div>
+            <div class="alert">
+              <p class="alertResponsibleText">*TOLONG ISI KETERANGAN!</p>
+            </div>
+          </div>
+
+          <div class="complain lpart">
+            <div class="list">
+              <div class="format" id="format4">
+                <p class="form">KELUHAN YANG DIALAMI</p>
+              </div>
+              <div class="dodot">
+                <p class="form">:</p>
+              </div>
+              <div class="tb">
+                <input type="text" class="generalTB complainTB" />
+              </div>
+            </div>
+            <div class="alert">
+              <p class="alertComplainText">*TOLONG ISI KELUHAN YANG DIALAMI!</p>
+            </div>
+          </div>
+
+          <div class="submitPart">
+            <button class="submitBtn form">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- FLOATING HELP BUTTON -->
+    <section class="helpFAQ">
+      <a href="./supportAI.html"><button class="btnHelp">?</button></a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="shapeFooter">
+        <div class="containerFooter">
+          <div class="containerInFooter conFirst">
+            <h4>copyrights©2024 Reserved by NINU NINU</h4>
+          </div>
+          <div class="containerInFooter">
+            <h4>rtbmyadmin@ninuninu.co.id</h4>
+          </div>
+          <div class="containerInFooter">
+            <div class="sosmedIcons">
+              <img src="Logo and Icons/Facebook.png" id="fb-icon" />
+            </div>
+            <div class="sosmedIcons">
+              <img src="Logo and Icons/x.png" id="x-icon" />
+            </div>
+            <div class="sosmedIcons">
+              <img src="Logo and Icons/Instagram.png" id="instagram-icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

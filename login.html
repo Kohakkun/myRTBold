@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./login/login.css">
+    <script defer src="common.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <section class="containerHeader">
+            <div id="myRTB-logo">
+                <img src="Logo and Icons/Logo Putih.png">
+                <p>myRTB</p>
+            </div>
+            <div id="user-info">
+                <div id="user-pic"><img src="home/Foto Profile Admin.png"></div>
+                <div id="user-profile">
+                    <div id="user-name">
+                        <p>Nama User</p>
+                    </div>
+                    <div class="user-status">
+                        <p>login as</p>
+                        <button id="btn-status">MAHASISWA</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- NAVIGATION BAR -->
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div class="mainContent">
+        <img src="./login/_7bf6bb05-c680-4be0-95a1-cbe17252d223-removebg-preview.png" alt="">
+        <div class="secondLayer">
+            <div class="mainLayer">
+                <form class="formsLogin" method="post" name="form" onsubmit="return validated()">
+                    <h2 class="username">USERNAME</h2>
+                    <input type="text" name="username" class="inputText">
+                    <div id = "username_error">Please fill up your Username!</div>
+                    <h2 class="password">PASSWORD</h2>
+                    <input type="password" name="password" class="inputText">
+                    <div class="erorBawah">
+                        <div id="password_error">Please fill up your Password!</div>
+                        <div id="submit_error">Wrong Username or Password!</div>
+                    </div>
+                    <h2 class="guest"> <a href="#">Login as Guest</a></h2>
+                    <div class="submitPart">
+                        <button class="submitBtn_form">LOGIN</button>
+                    </div>
+                </form>
+            </div>
+            <script src="./login/login.js"></script>
+        </div>
+    </div>
+
+    <!-- FLOATING HELP BUTTON -->
+    <section class="helpFAQ">
+        <a href="formKerusakan.html"><button class="btnHelp">?</button></a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="shapeFooter">
+            <div class="containerFooter">
+                <div class="containerInFooter conFirst">
+                    <h4>copyrights©2024 Reserved by NINU NINU</h4>
+                </div>
+                <div class="containerInFooter">
+                    <h4>rtbmyadmin@ninuninu.co.id</h4>
+                </div>
+                <div class="containerInFooter">
+                    <div class="sosmedIcons">
+                        <img src="Logo and Icons/Facebook.png" id="fb-icon">
+                    </div>
+                    <div class="sosmedIcons">
+                        <img src="Logo and Icons/x.png" id="x-icon">
+                    </div>
+                    <div class="sosmedIcons">
+                        <img src="Logo and Icons/Instagram.png" id="instagram-icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
