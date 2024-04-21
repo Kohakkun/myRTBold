@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.mainFrame {
+    margin-top: 30vh;
+    display: flex;
+    width: 100%;
+    height: 710px;
+}
+
+.main {
+    font-family: "Truculenta";
+    margin-left: 40px;
+    padding-left: 40px;
+    margin-right: 40px;
+    padding-right: 40px;
+    display: flex;
+    width: 100%;
+    height: 700px;
+    border-radius: 15px;
+    background: #a7dcfe;
+    flex-direction: column;
+}
+
+.triangle,
+.triangleClass, .triangleResponsible {
+    display: flex;
+    margin: 0.3125rem 0.9375rem 0.3125rem 0.9375rem;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transform-origin: center;
+}
+
+/* FORM DROPDOWN */
+.dropdown {
+    margin-top: 40px;
+    margin-left: 40px;
+    width: 60%;
+    height: 80px;
+    display: relative;
+    z-index: 2;
+}
+
+.dropbtn {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    background-color: #d9d9d9;
+    color: black;
+    font-size: 1rem;
+    border: none;
+    height: 100%;
+    border-radius: 15px;
+    width: 100%;
+    align-items: center;
+}
+
+.btnForm {
+    padding-left: 0.625rem;
+    font-size: 40px !important;
+}
+
+.dropbtn:hover {
+    background-color: #d8efff;
+}
+
+.dropdown-content {
+    visibility: collapse;
+    top: 6.25rem;
+    flex-direction: column;
+    display: flex;
+    border-radius: 15px;
+    z-index: 2;
+    height: 240px;
+    width: 100%;
+    flex-grow: 150px;
+    overflow-y: auto;
+}
+
+.formBtn {
+    background: #d9d9d9;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 0.625rem 0.625rem 0px rgba(0, 0, 0, 0.2);
+    margin-top: 1.25%;
+    color: black;
+    padding: 1.25% 7.125%;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    font-size: 35px;
+    font-family: "Truculenta";
+    text-align: left;
+    justify-content: flex-start;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    text-decoration: none !important;
+    width: 90%;
+}
+
+.formBtn:hover {
+    background-color: #d8efff;
+}
+
+.dropdown-content a:hover {
+    background-color: white;
+}
+
+.show {
+    visibility: visible;
+}
+
+.collapse {
+    visibility: collapse;
+}
+
+
+/* SHEET PART */
+.sheetPart {
+    padding-top: 35px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 2.5%;
+    display: flex;
+    width: calc(100% - 80px);
+    height: 400px;
+    border-radius: 15px;
+    border: none;
+    background: white;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.lpart {
+    display: flex;
+    flex-direction: column;
+}
+
+.alert {
+    visibility: hidden;
+    font-size: 20px;
+    width: 100%;
+    padding-left: 40%;
+    color: red;
+}
+
+.format {
+    margin-left: 4%;
+    margin-right: 2%;
+    width: 45%;
+}
+
+.form {
+    font-size: 2.1875rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.generalTB {
+    align-items: center;
+    margin-left: 0.625rem;
+    height: 50px;
+    width: 90%;
+    background: #d9d9d9;
+    border: none;
+    border-radius: 15px;
+    font-size: 2.1875rem;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+}
+
+.generalTB:hover {
+    background: #d8efff;
+}
+
+.tb {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.dodot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CLASS PART */
+.tbClass {
+    display: relative;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.ClassDropbtn {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    background-color: #d9d9d9;
+    color: black;
+    font-size: 1rem;
+    border: none;
+    height: 50px;
+    border-radius: 15px;
+    width: 90%;
+    align-items: center;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+.classBtn {
+    background: #d9d9d9;
+    border-radius: 15px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    color: black;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    font-size: 2.1875rem;
+    text-align: left;
+    justify-content: flex-start;
+    width: 94%;
+    padding-left: 5%;
+}
+
+.classBtn:hover {
+    background: #d8efff;
+}
+
+.ClassBtnForm {
+    padding-left: 0.625rem;
+    font-size: 2.5rem !important;
+}
+
+.classDropdown-content {
+    visibility: collapse;
+    margin-left: 10px;
+    flex-direction: column;
+    display: flex;
+    border-radius: 15px rgba(0, 0, 0, 0);
+    position: absolute;
+    top: auto;
+    z-index: 3;
+    height: 250px;
+    width: 48.75%;
+    overflow-y: auto;
+}
+
+.ClassDropbtn:hover {
+    background-color: #d8efff;
+}
+
+.classDropdown-content a:hover {
+    background-color: white;
+}
+
+
+
+/* SUBMIT PART */
+.submitPart {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px
+}
+
+.submitBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #48b7ff;
+    width: 14%;
+    height: 50px;
+    border: none !important;
+    border-radius: 30px;
+}
+
+.submitBtn:hover {
+    background: #d8efff;
+    cursor: pointer;
+}
+
+
+/* DATE PICKER PART */
+.tbResponsible {
+    display: relative;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 50px; /* Adjusted height */
+}
+
+.ResponsibleDropbtn {
+    display: flex;
+    flex-direction: row;
+    background-color: #d9d9d9;
+    color: black;
+    font-size: 1rem;
+    border: none;
+    height: 50px;
+    border-radius: 15px;
+    width: 90%;
+    align-items: center;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+.ResponsibleBtnForm {
+    padding-left: 0.625rem;
+    font-size: 2.5rem !important;
+}
+
+.responsibleDropdown-content {
+    visibility: collapse;
+    margin-left: 10px;
+    flex-direction: column;
+    display: flex;
+    border-radius: 15px rgba(0, 0, 0, 0);
+    position: absolute;
+    top: auto;
+    z-index: 3;
+    height: 250px;
+    width: 90%;
+    overflow-y: auto;
+}
+
+
+.datepicker {
+    max-width: 175px;   
+    background: white !important;
+    border: 1px solid black !important;
+    cursor: pointer;
+    align-items: center !important;
+    border-radius: 15px !important;
+}
+
+.headerDatePicker {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    align-items: center !important;
+    padding-left: 5px;
+}
+
+td {
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+    background: none;
+}
+
+td:hover {
+    background-color: lightgray;
+}
+
+.green-background {
+    background-color: lightgreen;
+}
+
+.prev {
+    margin-left: 5px;
+}
+
+.next {
+    margin-right: 5px;
+}
+
+.prev:hover, .next:hover {
+    background-color: lightgray;
+}
+
+.show {
+    visibility: visible;
+}
+
+.collapse {
+    visibility: collapse;
+}
