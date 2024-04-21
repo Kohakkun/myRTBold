@@ -1,0 +1,227 @@
+.mainContent{
+    height: 576px;
+    border-radius: 15px;
+    background: #a7dcfe;
+    margin: 210px 40px 28px 40px;
+    padding: 0.5vh 3vh;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    font-family: "Truculenta"; 
+}
+
+.backBeranda{
+    border-radius: 25px;
+    height: 50px;
+    width: 200px;
+    margin-top: 22px;
+    background: #EDEDED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none !important;
+    font-family: "Truculenta"; 
+    font-size: 20px;
+}
+
+.backBeranda:hover {
+    background: #d8efff;
+    cursor: pointer;
+}
+
+.backBeranda img{
+    rotate: 90deg;
+}
+
+.back a{
+    text-decoration: none;
+}
+
+.backBeranda h2{
+    margin-left: 20px;
+}
+
+.secondLayer{
+    border-radius: 25px;
+    background: #1D9BFF;
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    justify-content: space-between; 
+    margin-left: 10%;
+    height: 93%;
+    width: 90%;
+}
+
+.mainLayer{
+    border-radius: 25px;
+    background: #6DC6FE;
+    height: 90%;
+    width: 94.5%;
+    margin: auto;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 20px 0px;
+    height: calc(100% - 40px);
+}
+
+.chatAidly{
+    background: #21A9FF;
+    border-radius: 25px;
+    margin: 0px 0px 0px 180px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    padding: 10px 20px;
+}
+
+.chatAidly h2{
+    color: #ffff;
+    font-size: 25px;
+}
+
+.aidlyChatBox p{
+    font-size: 20px;
+}
+
+.chatUser{
+    background: #B8CDE8;
+    border-radius: 25px;
+    margin: 18px 20px 0px 0px;
+    width: 500px;
+    padding: 10px 20px;
+    margin-left: 38.5%;
+    color: #1177FF;
+}
+
+.chatUser h2{
+    align-items: end;
+    left: 200px;
+}
+
+.pertanyaan{
+    background: #ffff;
+    margin: 10px 0px;
+    padding: 5px 10px;
+    color: black;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+.tempatPertanyaan{
+    margin: 20px 20px 0px 0px;
+    width: 500px;
+    padding: 5px 20px;
+    margin-left: 38.5%;
+    background: #ffff;
+    color: black;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+.tempatJawabanAidly{
+    background: #21A9FF;
+    border-radius: 15px;
+    margin: 20px 0px 0px 180px;
+    width: 500px;
+    padding: 5px 20px;
+    font-size: 20px;
+}
+.pertanyaanConfirmation{
+    background: #21A9FF;
+    border-radius: 15px;
+    margin: 20px 0px 0px 180px;
+    width: 500px;
+    padding: 5px 20px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#confirmation{
+    display: none;
+}
+
+.confirmation{
+    margin-top: 10px;
+    width: 500px;
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.confirmation .yes:hover, .confirmation .no:hover{
+    background: #d8efff;
+    cursor: pointer;
+}
+
+.confirmation .yes{
+    width: 47%;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.confirmation .no{
+    width: 47%;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 15px;
+    color: red;
+    text-align: center;
+    font-size: 15px;
+}
+
+.pertanyaan:hover{
+    background: #d8efff;
+    cursor: pointer;
+}
+
+.chatManual .pertanyaanUser{
+    width: 90%;
+    border: none;
+    font-size: 20px;
+}
+
+.textManual{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-top: auto;
+    padding: 0px 48px;
+}
+
+.chatManual{
+    display: flex;
+    flex-direction: row;
+    background: white;
+    padding: 8px;
+    border-radius: 15px;
+    width: 47.85vw;
+}
+
+.icon{
+    width: 25px;
+    padding: 0px 15px 0px 10px;
+}
+
+.icon:hover{
+    cursor: pointer;
+}
+
+.maskot img{
+    position: absolute;
+    left: 50px;
+    bottom: -40px;
+    width: 575px;
+}
