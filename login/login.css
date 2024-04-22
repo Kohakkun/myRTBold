@@ -131,7 +131,7 @@ body {
 }
 
 .mainContent{
-    height: 544px;
+    height: 528px;
     border-radius: 15px;
     background: #a7dcfe;
     min-height: 10vh;
@@ -144,11 +144,11 @@ body {
     font-family: "Truculenta"; 
 }
 
-.mainContent img{
+.rtbIMG{
     width: 400px;
     position: absolute;
-    left: 10%;
-    bottom: 17.3%;
+    left: 152.5px;
+    bottom: 160px;
 
 }
 
