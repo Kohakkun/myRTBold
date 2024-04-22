@@ -227,7 +227,7 @@
   text-decoration: none;
 }
 
-.btnpeminjamandapur a:hover {
+.btnpeminjamandapur:hover {
   background-color: #0056b3;
 }
 
@@ -240,7 +240,7 @@
   text-decoration: none;
 }
 
-.btndetaildapur a:hover {
+.btndetaildapur:hover {
   background-color: #0056b3;
 }
 
@@ -290,7 +290,7 @@
   text-decoration: none;
 }
 
-.btnpeminjamancommunal a:hover {
+.btnpeminjamancommunal:hover {
   background-color: #0056b3;
 }
 
@@ -303,7 +303,7 @@
   text-decoration: none;
 }
 
-.btndetailcommunal a:hover {
+.btndetailcommunal:hover {
   background-color: #0056b3;
 }
 
@@ -352,7 +352,7 @@
   text-decoration: none;
 }
 
-.btnpeminjamanCOWOR a:hover {
+.btnpeminjamanCOWOR:hover {
   background-color: #0056b3;
 }
 
@@ -365,7 +365,7 @@
   text-decoration: none;
 }
 
-.btndetailCOWOR a:hover {
+.btndetailCOWOR:hover {
   background-color: #0056b3;
 }
 
@@ -415,7 +415,7 @@
   text-decoration: none;
 }
 
-.btnpeminjamancucijemur a:hover {
+.btnpeminjamancucijemur:hover {
   background-color: #0056b3;
 }
 
@@ -428,6 +428,6 @@
   text-decoration: none;
 }
 
-.btndetailcucijemur a:hover {
+.btndetailcucijemur:hover {
   background-color: #0056b3;
 }
