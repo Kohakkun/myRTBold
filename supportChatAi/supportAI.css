@@ -170,6 +170,7 @@
     border-radius: 15px;
     text-align: center;
     font-size: 15px;
+    border: none;
 }
 
 .confirmation .no{
@@ -180,6 +181,7 @@
     color: red;
     text-align: center;
     font-size: 15px;
+    border: none;
 }
 
 .pertanyaan:hover{
