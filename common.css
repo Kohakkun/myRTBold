@@ -39,6 +39,7 @@ body{
     display: flex;
     align-items: center;
     gap: 5%;
+    cursor: pointer;
 }
 #myRTB-logo img{
     height: 45px;
@@ -62,6 +63,11 @@ body{
 #user-info img{
     width: 100%;
     clip-path: circle(50% at 50% 50%);
+    transition: all ease-in-out 0.15s;
+    cursor: pointer;
+}
+#user-pic img:hover{
+    filter: brightness(80%);
 }
 #user-profile{
     padding-left: 10px;
@@ -72,6 +78,11 @@ body{
 #user-name{
     position: fixed;
     top: 25px;
+    transition: all ease-in-out 0.15s;
+    cursor: pointer;
+}
+#user-name:hover{
+    color: rgb(62, 62, 62);
 }
 #user-name p{
     font-family: 'Arya', sans-serif;
@@ -119,6 +130,11 @@ body{
     border: none;
     box-shadow: 0 3px 5px 0px rgba(0,0,0,0.2);
     cursor: pointer;
+    transition: all ease-in-out 0.25s;
+}
+#btn-login:hover{
+    color: var(--lightAccentV2);
+    background-color: var(--lightAccentV3);
 }
 /* NAVBAR */
 .navBar{
