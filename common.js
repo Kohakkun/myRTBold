@@ -32,15 +32,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
         containerAnchorForm.addEventListener('click', ()=>{});
     } else {
         console.log(anchorPeminjaman.href);
-        anchorPeminjaman.href = "javascrip:void(0)";
-        anchorForm.href = "javascrip:void(0)";
-        anchorFormKeluar.href = "javascrip:void(0)";
-        anchorFormRusak.href = "javascrip:void(0)";
-        anchorFormStay.href = "javascrip:void(0)";
+        anchorPeminjaman.href = "login.html";
+        anchorForm.href = "login.html";
+        anchorFormKeluar.href = "login.html";
+        anchorFormRusak.href = "login.html";
+        anchorFormStay.href = "login.html";
         containerAnchorPeminjaman.addEventListener('click', ()=>{
             confirmRedirection();
         });
-        anchorForm.href = "javascrip:void(0)";
+        anchorForm.href = "login.html";
         containerAnchorForm.addEventListener('click', ()=>{
             confirmRedirection();
         });
@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 // PREVENT GUEST TO ACCESS NON-ACCESSIBLE LINKS
 function confirmRedirection(){
     if(confirm('Cannot access this page as guest. Do you want to login?')){
+        // console.log("RAWRR")
         window.location.href = 'login.html'
     }
 }
@@ -134,3 +135,17 @@ dropdown_form.addEventListener('mouseleave', function(event){
         shownForm = false;
     }
 })
+
+// CLICK DIV GOES TO BERANDA
+const myRTBlogo = document.getElementById('myRTB-logo');
+myRTBlogo.addEventListener('click', ()=>{
+    window.location.href = "./index.html";
+})
+
+function locateToProfilePage(){
+    window.location.href = "./profileUser.html";
+}
+
+const userPic = document.getElementById('user-pic');
+userPic.addEventListener('click', locateToProfilePage);
+username_display.addEventListener('click', locateToProfilePage);
