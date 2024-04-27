@@ -1,0 +1,85 @@
+:root {
+    --primary: #A7DCFE;
+    --secondary: #6DC6FE;
+    --lightAccentV1: #EDEDED;
+    --lightAccentV2: #D8EFFF;
+    --lightAccentV3: rgb(0, 102, 255);
+    --darkAccentV1: #C0C0C0;
+    --darkAccentV2: #D8EFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cancelPopUp {
+    visibility: collapse; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1000; 
+}
+
+.mainPopUp {
+    background-color: var(--lightAccentV1); 
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    height: 140px;
+    font-family: 'Truculenta';
+    font-weight: 600;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mainPopUp p {
+    margin-top: 10px;
+}
+
+.popUp-Selection {
+    display: flex;
+    justify-content: space-around;
+}
+
+.popUpIya, .popUpTidak {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 5%;
+    border-radius: 5px;
+    transition: background-color 1s ease;
+    width: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popUpIya {
+    border: 2px solid #ff4d4d;
+}
+
+.popUpTidak {
+    border: 2px solid var(--lightAccentV3); 
+}
+
+.popUpIya p, .popUpTidak p {
+    margin: 0;
+    color: #000;
+}
+
+.popUpIya:hover {
+    background-color: #ff4d4d;
+}
+
+.popUpTidak:hover {
+    background-color: var(--lightAccentV3);
+}

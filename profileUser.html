@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./profileStyle.css">
+    <link rel="stylesheet" href="./profileStyleOverlayers.css">
+    <link rel="stylesheet" href="./CancelPopUp.css">
+    <script defer src="./common.js"></script>
+    <script defer src="./profileScript.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <section class="containerHeader">
+            <div id="myRTB-logo">
+                <img src="./Logo and Icons/Logo Putih.png">
+                <p>myRTB</p>
+            </div>
+            <div id="user-info">
+                <div id="user-pic"><img src="./home/Foto Profile Admin.png"></div>
+                <div id="user-profile">
+                    <div id="user-name">
+                        <p id="user-name-text">Nama User</p>
+                    </div>
+                    <div class="user-status">
+                        <p>login as</p>
+                        <button id="btn-status">MAHASISWA</button>
+                    </div>
+                </div>
+            </div>
+            <div class="loginContainer" id="login-container">
+                <a href="./login.html"><button id="btn-login">LOGIN</button></a>
+            </div>
+        </section>
+        <!-- NAVIGATION BAR -->
+        <nav class="navBar">
+            <ul>
+                <li>
+                    <div class="containerLinks">
+                        <a href="./index.html" id="link-beranda">BERANDA</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="containerLinks">
+                        <div class="wrapperLinks">
+                            <a href="./fasilitasRTB.html" id="link-fasilitas">FASILITAS</a>
+                            <button class="btnDrop" id="btn-drop-fasilitas"><img class="btnTriangle" src="./Logo and Icons/grey-dropdown.png"></button>
+                        </div>
+                    </div>
+                    <div class="containerDropdown dropdownFasilitas" id="drop-fasilitas">
+                        <div class="containerLinks drop-item-fasilitas"><a href="./fasilitasRTB.html#scrollCws" id="item-fasilitas">CO-WORKING SPACE</a></div>
+                        <div class="containerLinks drop-item-fasilitas"><a href="./fasilitasRTB.html#scrollCuciJemur" id="item-fasilitas">RUANG CUCI JEMUR</a></div>
+                        <div class="containerLinks drop-item-fasilitas"><a href="./fasilitasRTB.html#scrollKomunal" id="item-fasilitas">KOMUNAL</a></div>
+                        <div class="containerLinks drop-item-fasilitas"><a href="./fasilitasRTB.html#scrollSergun" id="item-fasilitas">RUANG SERBA GUNA</a></div>
+                        <div class="containerLinks drop-item-fasilitas"><a href="./fasilitasRTB.html#scrollDapur" id="item-fasilitas">RUANG DAPUR</a></div>
+                        <div class="containerLinks drop-item-fasilitas"><a href="./fasilitasRTB.html#" id="item-fasilitas">KIOS TALENTA</a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="containerLinks" id="container-link-form">
+                        <div class="wrapperLinks">
+                            <a href="./formKerusakan.html" id="link-forms">FORMULIR</a>
+                            <button class="btnDrop" id="btn-drop-forms"><img class="btnTriangle" src="./Logo and Icons/grey-dropdown.png"></button>
+                        </div>
+                    </div>
+                    <div class="containerDropdown dropdownForms" id="drop-forms">
+                        <div class="containerLinks drop-item-forms"><a href="./formKerusakan.html" id="item-form-kerusakan">FORM KERUSAKAN RTB</a></div>
+                        <div class="containerLinks drop-item-forms"><a href="./formKeluarMasuk.html" id="item-form-keluar">FORM KELUAR MASUK RTB</a></div>
+                        <div class="containerLinks drop-item-forms"><a href="./formsSIR.html" id="item-form-sir">FORM STAY IN RTB</a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="containerLinks" id="container-link-peminjaman">
+                        <a href="./peminjaman.html" id="link-peminjaman">PEMINJAMAN</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="containerLinks">
+                        <a href="./aboutUs.html" id="link-tentangkami">TENTANG KAMI</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- MAIN CONTENT -->
+    <main class="mainCol">
+        <div class="shapeMainCol">
+            <div class="containerMain">
+                <h3 class="gridTitle">My Profile</h3>
+                <div class="containerBiodata">
+                    <div class="cardPart partBiodata profileBox">
+                        <div class="profilePic"><img src="./home/Foto Profile Admin.png" alt=""></div>
+                        <div class="userProfile">
+                            <h4 id="fullname">Budi Tabuti</h4>
+                            <h4 id="class">PPTI 24</h4>
+                            <button class="btnActMed" id="btnChangePic">Change Picture</button>
+                        </div>
+                    </div>
+                    <div class="cardPart partBiodata personalGrid" action="">
+                        <h5>Informasi Personal</h5>
+                        <button class="btnActSm btnEdit" id="edit-personal"><i class="fa-regular fa-pen-to-square icon-margin"></i>Edit</button>
+                        <button class="btnActSm btnEdit hide" id="save-personal"><i class="fa-solid fa-floppy-disk icon-margin"></i>Save</button>
+                        <p class="labelBiodatas label1">Nama Depan</p>
+                        <p class="labelBiodatas label2">Nama Belakang</p>
+                        <p class="txtBiodatas txt1">Budi</p>
+                        <p class="txtBiodatas txt2">Tabuti</p>
+                        <p class="labelBiodatas label1">Tempat, tanggal lahir</p>
+                        <p class="labelBiodatas label2">Hobi</p>
+                        <p class="txtBiodatas txt1">Jakarta, 18 April 1995</p>
+                        <p class="txtBiodatas txt2">Bulutangkis</p>
+                        <label for="nomorHP" class="labelBiodatas label1">Nomor HP</label>
+                        <label for="email" class="labelBiodatas label2">Email</label>
+                        <input type="text" class="txtBiodatas txt1 txt-box hide" placeholder="Enter your phone number" id="input-phone" name="phone">
+                        <input type="email" class="txtBiodatas txt2 txt-box hide" placeholder="Enter your phone email" id="input-email" name="email">
+                        <span class="error" id="error-phone"></span>
+                        <span class="error" id="error-email"></span>
+                        <p class="txtBiodatas txt1" id="phone">123456789</p>
+                        <p class="txtBiodatas txt2" id="email">budioh99@gmail.com</p>
+                    </div>
+                    <div class="cardPart partBiodata addressGrid">
+                        <h5>Alamat</h5>
+                        <button class="btnActSm btnEdit" id="edit-address" onclick="togglePopup()"><i class="fa-regular fa-pen-to-square icon-margin"></i>Request Edit</button>
+                        <p class="labelBiodatas label1">Provinsi</p>
+                        <p class="labelBiodatas label2">Kota/Kabupaten</p>
+                        <p class="txtBiodatas txt1">Jawa Barat</p>
+                        <p class="txtBiodatas txt2">Depok</p>
+                        <p class="labelBiodatas label1">Kecamatan</p>
+                        <p class="labelBiodatas label2">Kelurahan</p>
+                        <p class="txtBiodatas txt1">Gandaria</p>
+                        <p class="txtBiodatas txt2">Sukabumi Utara</p>
+                        <p class="labelBiodatas labelAkhir">Jalan</p>
+                        <p class="txtBiodatas txtAkhir">Jalan Riau Umbulung II No. 60C</p>
+                    </div>
+                </div>
+                <div class="gridRecentAct">
+                    <div class="containerRecent">
+                        <h4>Recent Activities</h4>
+                        <div class="containerItemRecent">
+                            <div class="recentItem itemPeminjaman">
+                                <div class="detailItem">
+                                    <p class="itemTitle">Peminjaman</p>
+                                    <p class="itemDesc">Sergun</p>
+                                </div>
+                                <div class="containerButton"><button class="btnRecentMd btnCancel">Batal</button></div>
+                            </div>
+                            <div class="recentItem itemKerusakan">
+                                <div class="detailItem">
+                                    <p class="itemTitle">Laporan Kerusakan</p>
+                                    <p class="itemDesc">Lampu kamar mandi</p>
+                                </div>
+                                <div class="containerButton">
+                                    <div class="btnRecentMd statusPerbaikan">Direncanakan</div>
+                                    <button class="btnRecentMd btnDetail">Follow Up</button>
+                                </div>
+                            </div>
+                            <div class="recentItem itemKerusakan">
+                                <div class="detailItem">
+                                    <p class="itemTitle">Laporan Kerusakan</p>
+                                    <p class="itemDesc">Lampu kamar mandi</p>
+                                </div>
+                                <div class="containerButton">
+                                    <div class="btnRecentMd statusPerbaikan">Direncanakan</div>
+                                    <button class="btnRecentMd btnDetail">Follow Up</button>
+                                </div>
+                            </div>
+                            <div class="recentItem itemKerusakan">
+                                <div class="detailItem">
+                                    <p class="itemTitle">Laporan Kerusakan</p>
+                                    <p class="itemDesc">Lampu kamar mandi</p>
+                                </div>
+                                <div class="containerButton">
+                                    <div class="btnRecentMd statusPerbaikan">Direncanakan</div>
+                                    <button class="btnRecentMd btnDetail">Follow Up</button>
+                                </div>
+                            </div>
+                            <div class="recentItem itemKerusakan">
+                                <div class="detailItem">
+                                    <p class="itemTitle">Laporan Kerusakan</p>
+                                    <p class="itemDesc">Lampu kamar mandi</p>
+                                </div>
+                                <div class="containerButton">
+                                    <div class="btnRecentMd statusPerbaikan">Direncanakan</div>
+                                    <button class="btnRecentMd btnDetail">Follow Up</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btnMd btnLogout" id="btn-logout">Logout</button>
+            </div>
+
+        </div>
+    </main>
+    
+    <!-- EDIT ADDRESS FORM -->
+    <section class="editBiodata overlay-container" id="popupEditAdr">
+        <div class="popup-box">
+            <h2>Request Edit Address</h2>
+            <form action="" class="form-container container-grid">
+                <label for="provinsi" class="form-label labelBiodatas">Provinsi</label>
+                <label for="kota" class="form-label labelBiodatas">Kota/Kabupaten</label>
+                <input type="text" class="form-input txtBiodatas" id="provinsi" name="province" required>
+                <input type="text" class="form-input txtBiodatas" id="kota" name="city" required>
+                <label for="kecamatan" class="form-label labelBiodatas">Kecamatan</label>
+                <label for="kelurahan" class="form-label labelBiodatas">Kelurahan</label>
+                <input type="text" class="form-input txtBiodatas" id="kecamatan" name="kecamatan" required>
+                <input type="text" class="form-input txtBiodatas" id="kelurahan" name="kelurahan" required>
+                <label for="Jalan" class="form-label labelBiodatas label2" id="labelJalan">Jalan</label>
+                <input type="text" class="form-input txtBiodatas txt2" id="jalan" name="jalan" required>
+                <div class="containerButton overlayButtons">
+                    <button class="btnActSm btn2 btnCancel" id="btnCancel-adrForm">Batal</button>
+                    <button class="btnActSm btn2 btnRequest" id="btnReq-adrForm">Request Change</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Cancel Peminjamann Pop Up -->
+    <div class="cancelPopUp">
+        <div class="mainPopUp">
+            <p>Apakah anda yakin ingin membatalkan peminjaman ini?</p>
+            <div class="popUp-Selection">
+                <div class="popUpIya popSelect">
+                    <p>Iya</p>
+                </div>
+                <div class="popUpTidak popSelect">
+                    <p>Tidak</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FLOATING HELP BUTTON -->
+    <section class="helpFAQ">
+        <a href="./supportAI.html"><button class="btnHelp">?</button></a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="shapeFooter">
+            <div class="containerFooter">
+                <div class="containerInFooter conFirst">
+                    <h4>copyrights©2024 Reserved by NINU NINU</h4>
+                </div>
+                <div class="containerInFooter">
+                    <h4>rtbmyadmin@ninuninu.co.id</h4>
+                </div>
+                <div class="containerInFooter">
+                    <div class="sosmedIcons">
+                        <img src="./Logo and Icons/Facebook.png" id="fb-icon">
+                    </div>
+                    <div class="sosmedIcons">
+                        <img src="./Logo and Icons/x.png" id="x-icon">
+                    </div>
+                    <div class="sosmedIcons">
+                        <img src="./Logo and Icons/Instagram.png" id="instagram-icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,318 @@
+:root{
+    --primary: #A7DCFE;
+    --secondary: #6DC6FE;
+    --lightAccentV1: #EDEDED;
+    --lightAccentV2: #D8EFFF;
+    --lightAccentV3: rgb(0, 102, 255);
+    --darkAccentV1: #C0C0C0;
+    --darkAccentV2: #D8EFFF;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+h3{
+    font-size: 70px;
+    font-family: 'Yrsa';
+    font-weight: 400;
+    text-align: center;
+    padding: 10px 0px;
+}
+.mainCol{
+    margin-top: 25vh;
+    width: 100%;
+}
+.shapeMainCol{
+    margin: 20px 40px;
+    padding: 30px 30px;
+    height: 100%;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 25px;
+}
+.containerMain{
+    width: 100%;
+    padding-bottom: 30px;
+    height: auto;
+    display: grid;
+    gap: 2.5%;
+    grid-template-columns: 5fr 3fr;
+    grid-template-rows: 70px auto 40px;
+}
+.gridTitle{
+    grid-area: 1/1/3/3;
+    font-family: 'Truculenta';
+    font-size: 50px;
+    text-align: center;
+    /* font-weight: bold; */
+}
+.containerBiodata{
+    grid-area: 2/1/4/2;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lightAccentV1);
+    padding: 20px;
+    border-radius: 25px;
+}
+.cardPart{
+    padding: 5px;
+    border-bottom: 2px solid black;
+}
+.partBiodata{
+    padding: 20px 5px 20px 5px;
+}
+.partBiodata p{
+    font-size: 23px;
+}
+.profileBox{
+    display: flex;
+    padding-top: 5px;
+    width: 100%;
+}
+.profilePic{
+    width: 25%;
+    margin-right: 5%;
+    
+}
+.profilePic img{
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    clip-path: circle(50% at 50% 50%);
+}
+.userProfile{
+    width: 75%;
+}
+.userProfile h4{
+    font-family: 'Truculenta';
+    font-size: 40px;
+}
+.btnActMed{
+    padding: 2%;
+    /* border: 1px solid black; */
+    border: none;
+    box-shadow: 
+    0 1px 5px #fff, /*bottom external highlight*/
+    /* 0 -1px 5px #666, top external shadow  */
+    inset 0 -1px 2px rgba(0,0,0,0.5), /*bottom internal shadow*/ 
+    inset 0 1px 2px rgba(255,255,255,0.8); /*top internal highlight*/
+    border-radius: 10px;
+    font-family: 'Merriweather Sans';
+    transition: all ease-in-out 0.25s;
+}
+#btnChangePic{
+    background-color: var(--lightAccentV2);
+    color: var(--lightAccentV3);
+}
+#btnChangePic:hover{
+    cursor: pointer;
+    color: var(--lightAccentV2);
+    background-color: var(--lightAccentV3);
+}
+.personalGrid{
+    height: 300px;
+    display: grid;
+    /* grid-template-columns: 3fr 3fr 1fr; */
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    font-family: 'Truculenta';
+}
+.personalGrid h5,
+.addressGrid h5{
+    font-size: 30px;
+    grid-column: 1/3;
+}
+.btnActSm{
+    cursor: pointer;
+    padding: 2%;
+    width: 70%;
+    transition: all ease-in-out 0.25s;
+}
+.btnEdit{
+    grid-area: 1/3/2/4;
+    justify-self: end;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-family: 'Merriweather Sans';
+    font-weight: lighter;
+}
+.btnEdit:hover{
+    color: var(--lightAccentV2);
+    background-color: var(--lightAccentV3);
+}
+.icon-margin{
+    margin-right: 5px;
+}
+.labelBiodatas{
+    font-family: 'Truculenta';
+    font-weight: bold;
+    align-self: end;
+    font-size: 23px;
+}
+.label2,
+.txt2{
+    grid-column: span 2;
+}
+.txt-box{
+    width: 80%;
+    padding-left: 5px;
+    font-family: 'Truculenta', sans-serif;
+    font-size: 20px;
+    border: none;
+    border-radius: 3px;
+    border-bottom: 1px solid black;
+    transition: all ease-in-out 0.25s;
+}
+#input-email:focus,
+#input-phone:focus{
+    border: 2px solid var(--lightAccentV3);
+    outline: none;
+}
+.error{
+    font-family: 'Truculenta', sans-serif;
+    color: red;
+    font-size: 16px;
+}
+#error-phone{
+    grid-area: 8/1/9/2;
+}
+#error-email{
+    grid-area: 8/2/9/3;
+}
+.addressGrid{
+    height: 250px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    font-family: 'Truculenta';
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.labelAkhir{
+    grid-area: 6/1/7/4;
+}
+.txtAkhir{
+    grid-area: 7/1/8/4;
+}
+#edit-address{
+    width: 100%;
+}
+.gridRecentAct{
+    grid-area: 2/2/3/3;
+}
+.containerRecent{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lightAccentV2);
+    padding: 20px;
+    border-radius: 25px;
+    overflow-y: hidden;
+    max-height: 50%;
+    font-family: 'Truculenta';
+}
+.containerRecent h4{
+    font-size: 40px;
+}
+.containerItemRecent{
+    border-top: 5px solid var(--lightAccentV3);
+    overflow-y: scroll;
+}
+.containerItemRecent::-webkit-scrollbar {
+    width: 0px; /* Width of the scrollbar */
+}
+.recentItem{
+    margin-top: 5px;
+    padding: 5px 2px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+.recentItem p{
+    font-size: 25px;
+}
+.itemTitle{
+    font-weight: bold;
+}
+.containerButton{
+    display: flex;
+    width: auto;
+    column-gap: 10px;
+    align-items: center;
+}
+.containerButton button{
+    font-family: 'Merriweather Sans', sans-serif;
+}
+.btnRecentMd{
+    width: 100px;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    transition: all ease-in-out 0.25s;
+}
+.btnCancel{
+    border: 2px solid red;
+    background-color: white;
+    cursor: pointer;
+}
+.btnCancel:hover{
+    background-color: red;
+}
+.statusPerbaikan{
+    text-align: center;
+    background-color: greenyellow;
+    box-shadow: 
+    0 1px 5px #fff, /*bottom external highlight*/
+    inset 0 -1px 2px rgba(0,0,0,0.5), /*bottom internal shadow*/ 
+    inset 0 1px 2px rgba(255,255,255,0.8); /*top internal highlight*/
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+}
+.btnDetail{
+    border: 2px solid var(--lightAccentV3);
+    background-color: white;
+    cursor: pointer;
+}
+.btnDetail:hover{
+    background-color: var(--lightAccentV3);
+    color: white;
+}
+.btnMd{
+    width: 120px;
+    padding: 2px;
+    justify-self: end;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: 
+    inset 0 -1px 2px rgba(87, 0, 0, 0.5), /*bottom internal shadow*/ 
+    inset 0 1px 2px rgba(255, 0, 0, 0.8); /*top internal highlight*/
+    border: none;
+    cursor: pointer;
+    transition: all ease-in-out 0.25s;
+}
+.btnLogout{
+    background-color: white;
+}
+.btnLogout:hover{
+    background-color: red;
+    box-shadow: 
+    inset 0 -1px 2px rgba(0, 0, 0, 0.5), /*bottom internal shadow*/ 
+    inset 0 1px 2px rgba(255, 255, 255, 0.8); /*top internal highlight*/
+}
+.show{
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+}
+.hide{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+.errorBox{
+    border: 2px solid red;
+}
