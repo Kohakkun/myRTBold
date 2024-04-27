@@ -22,20 +22,29 @@ function selectQuestion(question) {
     var chatManual = document.getElementById('chatManual');
 
     selectedQuestion.textContent = question;
-    aidlyResponse.textContent = "Jawaban Anda akan Segera Dijawab oleh Admin";
+    aidlyResponse.textContent = getBotResponse(question);
 
+    if(aidlyResponse.textContent === "Jawaban Anda akan Segera Dijawab oleh Admin"){
+        // Show confirmation
+        confirmation.style.display = 'none';
+        chatManual.style.display = 'flex';
+
+        // Clear manual question input
+        document.getElementById('manualQuestionInput').value = '';
+    }
+    else{
+        // Show confirmation
+        confirmation.style.display = 'flex';
+
+        // Hide chat manual
+        chatManual.style.display = 'none';
+    }
     // Hide the question list
     questionList.style.display = 'none';
 
     // Show selected question and Aidly's response
     selectedQuestionBox.style.display = 'block';
     aidlyResponseBox.style.display = 'block';
-
-    // Show confirmation
-    confirmation.style.display = 'flex';
-
-    // Hide chat manual
-    chatManual.style.display = 'none';
 }
 
 // Function to reset chat
@@ -81,19 +90,13 @@ function confirmNo() {
     var thankYouMessage = document.getElementById('thankYouMessage');
 
     // Reset all elements to initial state
-    questionList.style.display = 'block';
-    selectedQuestionBox.style.display = 'none';
-    aidlyResponseBox.style.display = 'none';
+    questionList.style.display = 'none';
+    selectedQuestionBox.style.display = 'block';
+    aidlyResponseBox.style.display = 'block';
+    aidlyResponse.textContent = "Jawaban Anda akan Segera Dijawab oleh Admin";
     confirmation.style.display = 'none';
     thankYouMessage.style.display = 'none';
     chatManual.style.display = 'flex';
-
-    // Clear selected question and Aidly's response
-    document.getElementById('selectedQuestion').textContent = '';
-    document.getElementById('aidlyResponse').textContent = '';
-
-    // Clear manual question input
-    document.getElementById('manualQuestionInput').value = '';
 }
 
 // Function to get bot response based on user message
@@ -109,6 +112,6 @@ function getBotResponse(question) {
         case 'Bagaimana tata cara booking fasilitas di RTB?':
             return "Pertama-tama user harus login terlebih dahulu sebagai mahasiswa, kemudian user dapat memilih menu booking fasilitas melalui navbar, home page, atau facility page di web myRTB. Setelah itu mahasiswa memilih fasilitas yang ingin dibooking dengan memencet tombol 'reservasi'. Kemudian mahasiswa mengisi detail peminjaman fasilitas terkait dan menekan tombol 'kirim'. Setelah itu mahasiswa mendapatkan informasi bahwa booking berhasil dilakukan dan dapat melihat jadwal bookingnya.";
         default:
-            return "Maaf, saya tidak mengerti pertanyaan tersebut.";
+            return "Jawaban Anda akan Segera Dijawab oleh Admin";
     }
 }
