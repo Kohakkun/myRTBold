@@ -192,29 +192,38 @@ body {
     background: white;
     border: none;
     border-radius: 15px;
-    font-size: 2rem;
-    padding-left: 0.625rem;
+    font-size: 1.625rem;
+    padding-left: 0.8rem;
     padding-right: 0.625rem;
+    margin-top: 5px;
+    font-family: 'Truculenta';
+    letter-spacing: 1.5px;
 }
 
 #username_error{
+    margin-top: 3px;
     margin-left: 15px;
-    color: red;
+    color: rgb(221, 19, 19);
     font-weight: bold;
+    letter-spacing: 1.5px;
+    font-size: 20px;
 }
 
-#password_error, #submit_error{
+#username_error, #password_error, #submit_error{
     display: none;
 }
 
 .erorBawah{
+    margin-top: 3px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-right: 23px;
     margin-left: 15px;
-    color: red;
+    color: rgb(221, 19, 19);
     font-weight: bold;
+    letter-spacing: 1.5px;
+    font-size: 20px;
 }
 
 .erorBawah .submit_error{
