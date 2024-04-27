@@ -178,9 +178,10 @@
     background: #fff;
     border-radius: 15px;
     text-align: center;
-    font-size: 15px;
-    font-family: 'Truculenta';
+    font-size: 20px;
     border: none;
+    font-family: 'Truculenta';
+    line-height: 8px;
 }
 
 .confirmation .no{
@@ -190,9 +191,11 @@
     border-radius: 15px;
     color: red;
     text-align: center;
-    font-size: 15px;
-    font-family: 'Truculenta';
+    font-size: 20px;
     border: none;
+    font-family: 'Truculenta';
+    line-height: 8px;
+
 }
 
 .pertanyaan:hover{
