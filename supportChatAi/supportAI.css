@@ -1,4 +1,4 @@
-.mainContent{
+    .mainContent{
     height: 576px;
     border-radius: 15px;
     background: #a7dcfe;
@@ -52,6 +52,7 @@
     margin-left: 10%;
     height: 93%;
     width: 90%;
+    
 }
 
 .mainLayer{
@@ -59,7 +60,7 @@
     background: #6DC6FE;
     height: 90%;
     width: 94.5%;
-    margin: auto;
+    margin: auto;   
 }
 
 .container{
@@ -68,6 +69,14 @@
     justify-content: start;
     padding: 20px 0px;
     height: calc(100% - 40px);
+    overflow-y: scroll;
+    overflow-x: hidden; 
+    -ms-overflow-style: none;  /* Internet Explorer and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.container::-webkit-scrollbar {
+    display: none;
 }
 
 .chatAidly{
@@ -193,6 +202,9 @@
     width: 90%;
     border: none;
     font-size: 20px;
+    font-family: 'Truculenta';
+    letter-spacing: 1.5px;
+    outline: none;
 }
 
 .textManual{
