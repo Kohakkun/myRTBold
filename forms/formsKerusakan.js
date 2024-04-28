@@ -34,22 +34,45 @@ const titleObserver = new MutationObserver((mutationsList) => {
 
 titleObserver.observe(document.head, { subtree: true, childList: true });
 
-let clickOpt = false;
-let clickClass = false;
+let checkDropDown = false;
+let checkClass = false;
 
-dropbtn.addEventListener("click", function (event) {
+function dropbtnClickHandler(event) {
   event.stopPropagation();
   triangle.style.transform = triangle.style.transform === "rotate(180deg)" ? "rotate(0deg)" : "rotate(180deg)";
   myDropdown.classList.toggle("show");
   myDropdown.style.zIndex = myDropdown.classList.contains("show") ? 3 : 0;
-});
+  if (!checkDropDown) {
+    if (checkClass) {
+      tbClassClickHandler(event);
+    }
+    dropdown.style.borderBottomRightRadius = "0px";
+    dropdown.style.borderBottomLeftRadius = "0px";
+    checkDropDown = true;
+  } else {
+    dropdown.style.borderBottomRightRadius = "15px";
+    dropdown.style.borderBottomLeftRadius = "15px";
+    checkDropDown = false;
+  }
+}
 
-tbClass.addEventListener("click", function (event) {
+function tbClassClickHandler(event) {
   event.stopPropagation();
   triangleClass.style.transform = triangleClass.style.transform === "rotate(180deg)" ? "rotate(0deg)" : "rotate(180deg)";
   dropdownClass.classList.toggle("show");
   dropdownClass.style.zIndex = dropdownClass.classList.contains("show") ? 3 : 0;
-});
+  if (!checkClass) {
+    if (checkDropDown) {
+      dropbtnClickHandler(event);
+    }
+    checkClass = true;
+  } else {
+    checkClass = false;
+  }
+}
+
+dropbtn.addEventListener("click", dropbtnClickHandler);
+tbClass.addEventListener("click", tbClassClickHandler);
 
 classBtns.forEach((btn) => {
   btn.addEventListener("click", function (event) {
@@ -63,6 +86,9 @@ document.addEventListener("click", function (event) {
     myDropdown.classList.remove("show");
     myDropdown.style.zIndex = 0;
     triangle.style.transform = "rotate(0deg)"
+    dropdown.style.borderBottomRightRadius = "15px";
+    dropdown.style.borderBottomLeftRadius = "15px";
+    checkDropDown = false;
   }
   if (!event.target.matches(".ClassDropbtn")) {
     dropdownClass.classList.remove("show");
@@ -77,7 +103,7 @@ function alpha(word) {
       return false;
     }
   }
-  return true; // Added return true for valid word
+  return true; 
 }
 
 function check() {
@@ -86,14 +112,17 @@ function check() {
   const facility = fasilitas();
   const location = lokasi();
   const complain = keluhan();
-  const files = file();
 
-  if (!name || !classes || !facility || !location || !complain || !files) {
+  if (!name || !classes || !facility || !location || !complain) {
     // Handle when validation fails
     return false;
   } else {
-    // Handle when validation passes
-    return true;
+    
+    document.querySelector('.popup').style.visibility = 'visible';
+
+    setTimeout(() => {
+        window.location.href = 'formKerusakan.html';
+    }, 1000);
   }
 }
 
@@ -143,20 +172,6 @@ function keluhan() {
     return false;
   } else {
     alertComplain.classList.remove("show"); // Hide alert when validation passes
-    return true;
-  }
-}
-
-function file() {
-  const fileInput = document.querySelector('.fileFB');
-  
-  if (!fileInput.files || fileInput.files.length === 0) {
-    const alertFile = document.querySelector('.alertFileText');
-    alertFile.classList.add("show");
-    return false;
-  } else {
-    const alertFile = document.querySelector('.alertFileText');
-    alertFile.classList.remove("show");
     return true;
   }
 }
