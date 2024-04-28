@@ -2,6 +2,7 @@ const title = document.title;
 const btnForm = document.querySelector('.btnForm');
 const dropdown = document.querySelector(".dropdown");
 const myDropdown = document.getElementById("myDropdown");
+const dropbtn = document.querySelector(".dropbtn");
 const triangle = document.querySelector(".triangle");
 const triangleClass = document.querySelector(".triangleClass");
 const tbClass = document.querySelector(".tbClass");
@@ -10,6 +11,7 @@ const dropdownResponsible = document.querySelector(".responsibleDropdown-content
 const classTB = document.querySelector('.ClassBtnForm');
 const classBtns = document.querySelectorAll(".classBtn");
 const triangleResponsible = document.querySelector(".triangleResponsible");
+const responTB = document.querySelector(".ResponsibleDropbtn");
 const responsibleTB = document.querySelector('.ResponsibleBtnForm');
 const responsibleBtns = document.querySelectorAll(".responsibleBtn");
 const submitBtn = document.querySelector(".submitBtn");
@@ -26,33 +28,97 @@ const alertLocation = document.querySelector('.alertLocationText');
 const alertHari = document.querySelector('.alertHariText');
 const alertComplain = document.querySelector('.alertComplainText');
 
+document.addEventListener('DOMContentLoaded', () => {
+    let varname = sessionStorage.getItem('natan');
+    
+    if (varname == "CWS"){
+        btnForm.textContent = "CO-WORKING SPACE";
+    }
+    if (varname == "cuci"){
+        btnForm.textContent = "RUANG CUCI JEMUR"; 
+    }
+    if (varname == "sergun"){
+        btnForm.textContent = "RUANG SERBA GUNA";
+    }
+    if (varname == "komunal"){
+        btnForm.textContent = "KOMUNAL";
+    }
+    if (varname == "dapur"){
+        btnForm.textContent = "DAPUR";
+    }
+});
+
 let activeClassBtn = null;
 let activeResponsibleBtn = null;
 
-let clickOpt = false;
-let clickClass = false;
+let checkDropDown = false;
+let checkClass = false;
+let checkRespon = false;
 
-triangle.addEventListener("click", function (event) {
+function dropbtnClickHandler(event) {
     event.stopPropagation();
     triangle.style.transform = triangle.style.transform === "rotate(180deg)" ? "rotate(0deg)" : "rotate(180deg)";
     myDropdown.classList.toggle("show");
     myDropdown.style.zIndex = myDropdown.classList.contains("show") ? 3 : 0;
-});
+    if (!checkDropDown) {
+        if (checkClass) {
+            tbClassClickHandler(event);
+        }
+        if (checkRespon) {
+            responTBClickHandler(event);
+        }
+        dropdown.style.borderBottomRightRadius = "0px";
+        dropdown.style.borderBottomLeftRadius = "0px";
+        checkDropDown = true;
+    } else {
+        dropdown.style.borderBottomRightRadius = "15px";
+        dropdown.style.borderBottomLeftRadius = "15px";
+        checkDropDown = false;
+    }
+}
 
-tbClass.addEventListener("click", function (event) {
+function tbClassClickHandler(event) {
     event.stopPropagation();
     triangleClass.style.transform = triangleClass.style.transform === "rotate(180deg)" ? "rotate(0deg)" : "rotate(180deg)";
     dropdownClass.classList.toggle("show");
     dropdownClass.style.zIndex = dropdownClass.classList.contains("show") ? 3 : 0;
-});
+    if (!checkClass) {
+        if (checkDropDown) {
+            dropbtnClickHandler(event);
+        }
+        if (checkRespon) {
+            responTBClickHandler(event);
+        }
+        checkClass = true;
+    } else {
+        checkClass = false;
+    }
+}
 
-triangleResponsible.addEventListener("click", function (event) {
+dropbtn.addEventListener("click", dropbtnClickHandler);
+tbClass.addEventListener("click", tbClassClickHandler);
+
+function responTBClickHandler(event) {
     event.stopPropagation();
     triangleResponsible.style.transform = triangleResponsible.style.transform.includes("rotate(180deg)") ? "rotate(0deg)" : "rotate(180deg)";
     dropdownResponsible.classList.toggle("show");
     dropdownResponsible.style.zIndex = dropdownResponsible.classList.contains("show") ? 3 : 0;
-    document.querySelector('.datepicker').style.visibility = dropdownResponsible.classList.contains("show") ? 'visible' : 'hidden';
-});
+    if (dropdownResponsible.classList.contains("show")) {
+        if (checkDropDown) {
+            dropbtnClickHandler(event);
+        }
+        if (checkClass) {
+            tbClassClickHandler(event);
+        }
+        document.querySelector('.datepicker').style.visibility = 'visible';
+        checkRespon = true;
+    } else {
+        document.querySelector('.datepicker').style.visibility = 'hidden';
+        checkRespon = false;
+    }
+}
+
+responTB.addEventListener("click", responTBClickHandler);
 
 classBtns.forEach((btn) => {
     btn.addEventListener("click", function (event) {
@@ -82,7 +148,10 @@ document.addEventListener("click", function (event) {
     if (!event.target.matches(".dropbtn")) {
         myDropdown.classList.remove("show");
         myDropdown.style.zIndex = 0;
+        dropdown.style.borderBottomRightRadius = "15px";
+        dropdown.style.borderBottomLeftRadius = "15px";
         triangle.style.transform = "rotate(0)";
+        checkDropDown = false;
     }
     if (!event.target.matches(".ClassDropbtn")) {
         dropdownClass.classList.remove("show");
@@ -96,7 +165,7 @@ document.addEventListener("click", function (event) {
     }
 });
 
-document.addEventListener("click", function(event) {
+document.addEventListener("click", function (event) {
     const datePicker = document.querySelector('.datepicker');
     if (event.target !== datePicker && !datePicker.contains(event.target) && datePicker.style.visibility === 'visible') {
         datePicker.style.visibility = 'collapse';
@@ -128,14 +197,17 @@ function check() {
     const name = nama();
     const classes = kelas();
     const facility = fasilitas();
-    const daysresult = days();
     const complain = keluhan();
     const izin = perizinan();
 
-    if (!name || !classes || !facility || !complain || !izin || !daysresult) {
+    if (!name || !classes || !facility || !complain || !izin) {
         return false;
     } else {
-        return true;
+        document.querySelector('.popup').style.visibility = 'visible';
+
+        setTimeout(() => {
+            window.location.href = 'peminjaman.html';
+        }, 1000);
     }
 }
 
@@ -171,30 +243,11 @@ function perizinan() {
 
 function fasilitas() {
     if (!facilityTB.value) {
+        console.log("tujuan");
         alertFacility.classList.add("show");
         return false;
     } else {
         alertFacility.classList.remove("show");
-        return true;
-    }
-}
-
-function lokasi() {
-    if (!locationTB.value) {
-        alertLocation.classList.add("show");
-        return false;
-    } else {
-        alertLocation.classList.remove("show");
-        return true;
-    }
-}
-
-function days() {
-    if (!hariTB.value) {
-        alertHari.classList.add("show");
-        return false;
-    } else {
-        alertHari.classList.remove("show");
         return true;
     }
 }
