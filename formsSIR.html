@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form Stay In RTB</title>
+    <title>Formulir Stay In RTB</title>
     <link rel="icon" type="image/x-icon" a href="./Logo and Icons/Logo Putih.png"/>
     <script defer src="forms/formsSIR.js"></script>
     <link rel="stylesheet" href="forms/formsSIR.css" />
     <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="submitPopUp.css" />
     <script defer src="common.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,130 +22,87 @@
     <!-- HEADER -->
     <header class="header">
       <section class="containerHeader">
-        <div id="myRTB-logo">
-          <img src="./Logo and Icons/Logo Putih.png" />
-          <p>myRTB</p>
-        </div>
-        <div id="user-info">
-          <div id="user-pic"><img src="./home/Foto Profile Admin.png" /></div>
-          <div id="user-profile">
-            <div id="user-name">
-              <p id="user-name-text">Nama User</p>
-            </div>
-            <div class="user-status">
-              <p>login as</p>
-              <button id="btn-status">MAHASISWA</button>
-            </div>
+          <div id="myRTB-logo">
+              <img src="./Logo and Icons/Logo Putih.png">
+              <p>myRTB</p>
           </div>
-        </div>
-        <div class="loginContainer" id="login-container">
-          <a href="./login.html"><button id="btn-login">LOGIN</button></a>
-        </div>
+          <div id="user-info">
+              <div id="user-pic"><img src="./home/Foto Profile Admin.png"></div>
+              <div id="user-profile">
+                  <div id="user-name">
+                      <p id="user-name-text">Nama User</p>
+                  </div>
+                  <div class="user-status">
+                      <p>login as</p>
+                      <button id="btn-status">MAHASISWA</button>
+                  </div>
+              </div>
+          </div>
+          <div class="loginContainer" id="login-container">
+              <a href="./login.html"><button id="btn-login">LOGIN</button></a>
+          </div>
       </section>
       <!-- NAVIGATION BAR -->
       <nav class="navBar">
-        <ul>
-          <li>
-            <div class="containerLinks">
-              <a href="./index.html" id="link-beranda">BERANDA</a>
-            </div>
-          </li>
-          <li>
-            <div class="containerLinks">
-              <div class="wrapperLinks">
-                <a href="./fasilitasRTB.html" id="link-fasilitas">FASILITAS</a>
-                <button class="btnDrop" id="btn-drop-fasilitas">
-                  <img
-                    class="btnTriangle"
-                    src="./Logo and Icons/grey-dropdown.png"
-                  />
-                </button>
-              </div>
-            </div>
-            <div
-              class="containerDropdown dropdownFasilitas"
-              id="drop-fasilitas"
-            >
-              <div class="containerLinks drop-item-fasilitas">
-                <a href="./fasilitasRTB.html#scrollCws" id="item-fasilitas"
-                  >CO-WORKING SPACE</a
-                >
-              </div>
-              <div class="containerLinks drop-item-fasilitas">
-                <a
-                  href="./fasilitasRTB.html#scrollCuciJemur"
-                  id="item-fasilitas"
-                  >RUANG CUCI JEMUR</a
-                >
-              </div>
-              <div class="containerLinks drop-item-fasilitas">
-                <a href="./fasilitasRTB.html#scrollKomunal" id="item-fasilitas"
-                  >KOMUNAL</a
-                >
-              </div>
-              <div class="containerLinks drop-item-fasilitas">
-                <a href="./fasilitasRTB.html#scrollSergun" id="item-fasilitas"
-                  >RUANG SERBA GUNA</a
-                >
-              </div>
-              <div class="containerLinks drop-item-fasilitas">
-                <a href="./fasilitasRTB.html#scrollDapur" id="item-fasilitas"
-                  >RUANG DAPUR</a
-                >
-              </div>
-              <div class="containerLinks drop-item-fasilitas">
-                <a href="./fasilitasRTB.html#" id="item-fasilitas"
-                  >KIOS TALENTA</a
-                >
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="containerLinks" id="container-link-form">
-              <div class="wrapperLinks">
-                <a href="./formKerusakan.html" id="link-forms">FORMULIR</a>
-                <button class="btnDrop" id="btn-drop-forms">
-                  <img
-                    class="btnTriangle"
-                    src="Logo and Icons/grey-dropdown.png"
-                  />
-                </button>
-              </div>
-            </div>
-            <div class="containerDropdown dropdownForms" id="drop-forms">
-              <div class="containerLinks drop-item-forms">
-                <a href="./formKerusakan.html" id="item-form-kerusakan"
-                  >FORM KERUSAKAN RTB</a
-                >
-              </div>
-              <div class="containerLinks drop-item-forms">
-                <a href="./formKeluarMasuk.html" id="item-form-keluar"
-                  >FORM KELUAR MASUK RTB</a
-                >
-              </div>
-              <div class="containerLinks drop-item-forms">
-                <a href="./formsSIR.html" id="item-form-sir"
-                  >FORM STAY IN RTB</a
-                >
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="containerLinks" id="container-link-peminjaman">
-              <a href="./peminjaman.html" id="link-peminjaman">PEMINJAMAN</a>
-            </div>
-          </li>
-          <li>
-            <div class="containerLinks">
-              <a href="./aboutUs.html" id="link-tentangkami">TENTANG KAMI</a>
-            </div>
-          </li>
-        </ul>
+          <ul>
+              <li>
+                  <div class="containerLinks">
+                      <a href="./index.html" id="link-beranda">BERANDA</a>
+                  </div>
+              </li>
+              <li id="container-link-fasilitas-li">
+                  <div class="containerLinks" id="container-link-fasilitas">
+                      <div class="wrapperLinks">
+                          <a href="./fasilitasRTB.html" id="link-fasilitas">FASILITAS</a>
+                          <button class="btnDrop" id="btn-drop-fasilitas"><img class="btnTriangle" src="./Logo and Icons/grey-dropdown2.png"></button>
+                      </div>
+                  </div>
+                  <div class="containerDropdown dropdownFasilitas" id="drop-fasilitas">
+                      <div class="containerLinks drop-item-fasilitas"><a href="./fasilitasRTB.html#scrollCws" id="item-fasilitas">CO-WORKING SPACE</a></div>
+                      <div class="containerLinks drop-item-fasilitas"><a href="./fasilitasRTB.html#scrollCuciJemur" id="item-fasilitas">RUANG CUCI JEMUR</a></div>
+                      <div class="containerLinks drop-item-fasilitas"><a href="./fasilitasRTB.html#scrollKomunal" id="item-fasilitas">KOMUNAL</a></div>
+                      <div class="containerLinks drop-item-fasilitas"><a href="./fasilitasRTB.html#scrollSergun" id="item-fasilitas">RUANG SERBA GUNA</a></div>
+                      <div class="containerLinks drop-item-fasilitas"><a href="./fasilitasRTB.html#scrollDapur" id="item-fasilitas">RUANG DAPUR</a></div>
+                      <div class="containerLinks drop-item-fasilitas"><a href="./fasilitasRTB.html#" id="item-fasilitas">KIOS TALENTA</a></div>
+                  </div>
+              </li>
+              <li id="container-link-form-li">
+                  <div class="containerLinks" id="container-link-form">
+                      <div class="wrapperLinks">
+                          <a href="javascript:void(0)" id="link-forms">FORMULIR</a>
+                          <button class="btnDrop" id="btn-drop-forms"><img class="btnTriangle" src="Logo and Icons/grey-dropdown2.png"></button>
+                      </div>
+                  </div>
+                  <div class="containerDropdown dropdownForms" id="drop-forms">
+                      <div class="containerLinks drop-item-forms"><a href="javascript:void(0)" id="item-form-kerusakan">FORM KERUSAKAN RTB</a></div>
+                      <div class="containerLinks drop-item-forms"><a href="javascript:void(0)" id="item-form-keluar">FORM KELUAR MASUK RTB</a></div>
+                      <div class="containerLinks drop-item-forms"><a href="javascript:void(0)" id="item-form-sir">FORM STAY IN RTB</a></div>
+                  </div>
+              </li>
+              <li id="container-link-peminjaman-li">
+                  <div class="containerLinks" id="container-link-peminjaman">
+                      <a href="javascript:void(0)" id="link-peminjaman">PEMINJAMAN</a>
+                      <button class="btnDrop" id="btn-drop-peminjaman"><img class="btnTriangle" src="./Logo and Icons/grey-dropdown2.png"></button>
+                  </div>
+                  <div class="containerDropdown dropdownFasilitas" id="drop-peminjaman">
+                      <div class="containerLinks drop-item-fasilitas"><a href="javascript:void(0)" id="item-cws">CO-WORKING SPACE</a></div>
+                      <div class="containerLinks drop-item-fasilitas"><a href="javascript:void(0)" id="item-cuci">RUANG CUCI JEMUR</a></div>
+                      <div class="containerLinks drop-item-fasilitas"><a href="javascript:void(0)" id="item-komunal">KOMUNAL</a></div>
+                      <div class="containerLinks drop-item-fasilitas"><a href="javascript:void(0)" id="item-sergun">RUANG SERBA GUNA</a></div>
+                      <div class="containerLinks drop-item-fasilitas"><a href="javascript:void(0)" id="item-dapur">RUANG DAPUR</a></div>
+                  </div>
+              </li>
+              <li>
+                  <div class="containerLinks">
+                      <a href="./aboutUs.html" id="link-tentangkami">TENTANG KAMI</a>
+                  </div>
+              </li>
+          </ul>
       </nav>
-    </header>
+  </header>
 
     <div class="mainFrame">
-      <form class="main" onsubmit="return check()">
+      <form class="main" onsubmit="return false">
         <div class="dropdown">
           <div class="dropbtn">
             <div class="triangle">
@@ -156,17 +114,21 @@
           </div>
           <div class="dropdown-content" id="myDropdown">
             <a href="formKerusakan.html" class="formBtn"
-              >FORMULIR KERUSAKAN RTB</a
+              >Formulir Kerusakan RTB</a
             >
             <a href="formKeluarMasuk.html" class="formBtn"
-              >FORMULIR KELUAR/MASUK RTB</a
+              >Formulir Keluar/Masuk RTB</a
             >
-            <a href="formsSIR.html" class="formBtn">FORMULIR STAY IN RTB</a>
+            <a href="formsSIR.html" class="formBtn">Formulir Stay In RTB</a>
           </div>
         </div>
 
         <div class="sheetPart">
           <div class="name lpart">
+            <div class="list">
+              <p class="keterangan">*Semua kolomm wajib diisi!</p>
+            </div>
+
             <div class="list">
               <div class="format" id="format1">
                 <p class="form">NAMA</p>
@@ -320,10 +282,15 @@
           </div>
 
           <div class="submitPart">
-            <button class="submitBtn form">Submit</button>
+            <button class="submitBtn form" onclick="return check()">Submit</button>
           </div>
         </div>
       </form>
+      <div class="popup">
+        <div class="popText">
+          <p>Terkirim</p>
+        </div>
+      </div>
     </div>
 
     <!-- FLOATING HELP BUTTON -->
