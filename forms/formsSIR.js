@@ -13,6 +13,7 @@ const triangleResponsible = document.querySelector(".triangleResponsible");
 const tbResponsible = document.querySelector(".tbResponsible");
 const dropdownResponsible = document.querySelector(".responsibleDropdown-content");
 const responsibleTB = document.querySelector('.ResponsibleBtnForm');
+const responTB = document.querySelector(".ResponsibleDropbtn");
 const responsibleBtns = document.querySelectorAll(".responsibleBtn");
 const submitBtn = document.querySelector(".submitBtn");
 const nameTB = document.querySelector('.nameTB');
@@ -47,26 +48,76 @@ titleObserver.observe(document.head, { subtree: true, childList: true });
 let clickOpt = false;
 let clickClass = false;
 
-dropbtn.addEventListener("click", function (event) {
+let checkDropDown = false;
+let checkClass = false;
+let checkRespon = false;
+let checkPermission = false;
+
+function dropbtnClickHandler(event) {
   event.stopPropagation();
   triangle.style.transform = triangle.style.transform === "rotate(180deg)" ? "rotate(0deg)" : "rotate(180deg)";
   myDropdown.classList.toggle("show");
   myDropdown.style.zIndex = myDropdown.classList.contains("show") ? 3 : 0;
-});
+  if (!checkDropDown) {
+    if (checkClass) {
+      tbClassClickHandler(event);
+    }
+    if (checkRespon) {
+      responTBClickHandler(event);
+    }
+    if (checkPermission) {
+      tbPermissionClickHandler(event);
+    }
+    dropdown.style.borderBottomRightRadius = "0px";
+    dropdown.style.borderBottomLeftRadius = "0px";
+    checkDropDown = true;
+} else {
+    dropdown.style.borderBottomRightRadius = "15px";
+    dropdown.style.borderBottomLeftRadius = "15px";
+    checkDropDown = false;
+  }
+}
 
-tbClass.addEventListener("click", function (event) {
+function tbClassClickHandler(event) {
   event.stopPropagation();
   triangleClass.style.transform = triangleClass.style.transform === "rotate(180deg)" ? "rotate(0deg)" : "rotate(180deg)";
   dropdownClass.classList.toggle("show");
   dropdownClass.style.zIndex = dropdownClass.classList.contains("show") ? 3 : 0;
-});
+  if (!checkClass) {
+    if (checkDropDown) {
+        dropbtnClickHandler(event);
+      }
+      if (checkRespon) {
+        responTBClickHandler(event);
+      }
+    checkClass = true;
+} else {
+    checkClass = false;
+}
+}
 
-tbResponsible.addEventListener("click", function (event) {
-  event.stopPropagation();
-  triangleResponsible.style.transform = triangleResponsible.style.transform.includes("rotate(180deg)") ? "rotate(0deg)" : "rotate(180deg)";
-  dropdownResponsible.classList.toggle("show");
-  dropdownResponsible.style.zIndex = dropdownResponsible.classList.contains("show") ? 3 : 0;
-});
+dropbtn.addEventListener("click", dropbtnClickHandler);
+tbClass.addEventListener("click", tbClassClickHandler);
+
+function responTBClickHandler(event) {
+    event.stopPropagation();
+    triangleResponsible.style.transform = triangleResponsible.style.transform.includes("rotate(180deg)") ? "rotate(0deg)" : "rotate(180deg)";
+    dropdownResponsible.classList.toggle("show");
+    dropdownResponsible.style.zIndex = dropdownResponsible.classList.contains("show") ? 3 : 0;
+    if (dropdownResponsible.classList.contains("show")) {
+        if (checkDropDown) {
+            dropbtnClickHandler(event);
+        }
+        if (checkClass) {
+          tbClassClickHandler(event);
+        }
+        checkRespon = true;
+    } else {
+        checkRespon = false;
+    }
+}
+
+responTB.addEventListener("click", responTBClickHandler);
 
 classBtns.forEach((btn) => {
   btn.addEventListener("click", function (event) {
@@ -97,6 +148,9 @@ document.addEventListener("click", function (event) {
     myDropdown.classList.remove("show");
     myDropdown.style.zIndex = 0;
     triangle.style.transform = "rotate(0)";
+    dropdown.style.borderBottomRightRadius = "15px";
+    dropdown.style.borderBottomLeftRadius = "15px";
+    checkDropDown = false;
   }
   if (!event.target.matches(".ClassDropbtn")) {
     dropdownClass.classList.remove("show");
@@ -131,7 +185,12 @@ function check() {
   if (!name || !classes || !facility || !location || !complain || !izin || !daysresult) {
     return false;
   } else {
-    return true;
+    
+    document.querySelector('.popup').style.visibility = 'visible';
+
+    setTimeout(() => {
+        window.location.href = 'formsSIR.html';
+    }, 1000);
   }
 }
 
