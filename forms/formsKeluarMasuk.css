@@ -28,7 +28,16 @@ body {
     flex-direction: column;
 }
 
-.triangle, .triangleClass, .triangleResponsible, .trianglePermission {
+.keterangan {
+    margin-left: 25px;
+    padding-left: 20px;
+    color: red;
+}
+
+.triangle,
+.triangleClass,
+.triangleResponsible,
+.trianglePermission {
     display: flex;
     margin: 10px 10px 10px 20px;
     width: 20px;
@@ -45,11 +54,16 @@ body {
     z-index: 2;
 }
 
-.dropbtn {  
+.dropdown {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+.dropbtn {
     cursor: pointer;
     display: flex;
     flex-direction: row;
-    background-color: #d9d9d9;
+    background-color: rgb(233, 233, 233);
     color: black;
     font-size: 1rem;
     border: none;
@@ -70,19 +84,30 @@ body {
 
 .dropdown-content {
     visibility: collapse;
-    top: 6.25rem;
+    top: 6.2rem;
     flex-direction: column;
     display: flex;
-    border-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
     z-index: 2;
     height: 240px;
     width: 100%;
     flex-grow: 150px;
-    overflow-y: auto;
+    overflow-y: scroll;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-content::-webkit-scrollbar {
+    width: 0px;
+}
+
+.dropdown {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
 }
 
 .formBtn {
-    background: #d9d9d9;
+    background: rgb(233, 233, 233);
     border-radius: 15px;
     border: none;
     box-shadow: 0px 0.625rem 0.625rem 0px rgba(0, 0, 0, 0.2);
@@ -98,6 +123,7 @@ body {
     justify-content: flex-start;
     border: 2px solid rgba(0, 0, 0, 0.2);
     text-decoration: none !important;
+    cursor: pointer;
 }
 
 .formBtn:hover {
@@ -105,7 +131,7 @@ body {
 }
 
 .dropdown-content a:hover {
-    background-color: white;
+    background-color: D8EFFF;
 }
 
 .show {
@@ -125,7 +151,7 @@ body {
     margin-top: 20px;
     display: flex;
     width: calc(100% - 80px);
-    height: 560px;
+    height: 590px;
     border-radius: 15px;
     border: none;
     background: white;
@@ -242,8 +268,9 @@ body {
     font-size: 2.1875rem;
     text-align: left;
     justify-content: flex-start;
-    width: 94%;
-    padding-left: 5%;
+    width: 99%;
+    cursor: pointer;
+    padding-left: 3px;
 }
 
 .classBtn:hover {
@@ -259,14 +286,19 @@ body {
     visibility: collapse;
     margin-left: 10px;
     flex-direction: column;
+    padding-left: 0px;
     display: flex;
-    border-radius: 15px rgba(0, 0, 0, 0);
+    border-radius: 15px;
     position: absolute;
-    top: auto;
     z-index: 3;
     height: 250px;
-    width: 48.75%;
-    overflow-y: auto;
+    width: 49%;
+    overflow-y: scroll;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.classDropdown-content::-webkit-scrollbar{
+    width: 0px;
 }
 
 .ClassDropbtn:hover {
@@ -316,14 +348,14 @@ body {
     visibility: collapse;
     margin-left: 10px;
     flex-direction: column;
+    padding-left: 0px;
     display: flex;
-    border-radius: 15px rgba(0, 0, 0, 0);
+    border-radius: 15px;
     position: absolute;
-    top: auto;
     z-index: 3;
-    height: 250px;
-    width: 100%;
-    overflow-y: auto;
+    height: 120px;
+    width: 49%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .permissionBtn {
@@ -338,8 +370,9 @@ body {
     font-size: 2.1875rem;
     text-align: left;
     justify-content: flex-start;
-    width: 43.5%;
-    padding-left: 5%;
+    width: 99%;
+    cursor: pointer;
+    padding-left: 3px;
 }
 
 .permissionBtn:hover {
@@ -388,8 +421,9 @@ body {
     font-size: 2.1875rem;
     text-align: left;
     justify-content: flex-start;
-    width: 94%;
-    padding-left: 5%;
+    width: 99%;
+    cursor: pointer;
+    padding-left: 3px;
 }
 
 .responsibleBtn:hover {
@@ -405,14 +439,19 @@ body {
     visibility: collapse;
     margin-left: 10px;
     flex-direction: column;
+    padding-left: 0px;
     display: flex;
-    border-radius: 15px rgba(0, 0, 0, 0);
+    border-radius: 15px;
     position: absolute;
-    top: auto;
     z-index: 3;
-    height: 120px;
-    width: 48.75%;
-    overflow-y: auto;
+    height: 100px;
+    width: 49%;
+    overflow-y: scroll;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.responsibleDropdown-content::-webkit-scrollbar{
+    width: 0px;
 }
 
 .ResponsibleDropbtn:hover {
@@ -437,7 +476,7 @@ body {
 .submitPart {
     display: flex;
     justify-content: flex-end;
-    margin-top: 30px
+    margin-top: 24px
 }
 
 .submitBtn {
