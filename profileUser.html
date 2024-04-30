@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
+    <link rel="icon" type="image/x-icon" a href="./Logo and Icons/Logo Putih.png"/>
     <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./submitPopUs.css">
     <link rel="stylesheet" href="./profileStyle.css">
     <link rel="stylesheet" href="./profileStyleOverlayers.css">
     <link rel="stylesheet" href="./CancelPopUp.css">
@@ -47,11 +49,11 @@
                         <a href="./index.html" id="link-beranda">BERANDA</a>
                     </div>
                 </li>
-                <li>
-                    <div class="containerLinks">
+                <li id="container-link-fasilitas-li">
+                    <div class="containerLinks" id="container-link-fasilitas">
                         <div class="wrapperLinks">
                             <a href="./fasilitasRTB.html" id="link-fasilitas">FASILITAS</a>
-                            <button class="btnDrop" id="btn-drop-fasilitas"><img class="btnTriangle" src="./Logo and Icons/grey-dropdown.png"></button>
+                            <button class="btnDrop" id="btn-drop-fasilitas"><img class="btnTriangle" src="./Logo and Icons/grey-dropdown2.png"></button>
                         </div>
                     </div>
                     <div class="containerDropdown dropdownFasilitas" id="drop-fasilitas">
@@ -63,22 +65,30 @@
                         <div class="containerLinks drop-item-fasilitas"><a href="./fasilitasRTB.html#" id="item-fasilitas">KIOS TALENTA</a></div>
                     </div>
                 </li>
-                <li>
+                <li id="container-link-form-li">
                     <div class="containerLinks" id="container-link-form">
                         <div class="wrapperLinks">
-                            <a href="./formKerusakan.html" id="link-forms">FORMULIR</a>
-                            <button class="btnDrop" id="btn-drop-forms"><img class="btnTriangle" src="./Logo and Icons/grey-dropdown.png"></button>
+                            <a href="javascript:void(0)" id="link-forms">FORMULIR</a>
+                            <button class="btnDrop" id="btn-drop-forms"><img class="btnTriangle" src="Logo and Icons/grey-dropdown2.png"></button>
                         </div>
                     </div>
                     <div class="containerDropdown dropdownForms" id="drop-forms">
-                        <div class="containerLinks drop-item-forms"><a href="./formKerusakan.html" id="item-form-kerusakan">FORM KERUSAKAN RTB</a></div>
-                        <div class="containerLinks drop-item-forms"><a href="./formKeluarMasuk.html" id="item-form-keluar">FORM KELUAR MASUK RTB</a></div>
-                        <div class="containerLinks drop-item-forms"><a href="./formsSIR.html" id="item-form-sir">FORM STAY IN RTB</a></div>
+                        <div class="containerLinks drop-item-forms"><a href="javascript:void(0)" id="item-form-kerusakan">FORM KERUSAKAN RTB</a></div>
+                        <div class="containerLinks drop-item-forms"><a href="javascript:void(0)" id="item-form-keluar">FORM KELUAR MASUK RTB</a></div>
+                        <div class="containerLinks drop-item-forms"><a href="javascript:void(0)" id="item-form-sir">FORM STAY IN RTB</a></div>
                     </div>
                 </li>
-                <li>
+                <li id="container-link-peminjaman-li">
                     <div class="containerLinks" id="container-link-peminjaman">
-                        <a href="./peminjaman.html" id="link-peminjaman">PEMINJAMAN</a>
+                        <a href="javascript:void(0)" id="link-peminjaman">PEMINJAMAN</a>
+                        <button class="btnDrop" id="btn-drop-peminjaman"><img class="btnTriangle" src="./Logo and Icons/grey-dropdown2.png"></button>
+                    </div>
+                    <div class="containerDropdown dropdownFasilitas" id="drop-peminjaman">
+                        <div class="containerLinks drop-item-fasilitas"><a href="javascript:void(0)" id="item-cws">CO-WORKING SPACE</a></div>
+                        <div class="containerLinks drop-item-fasilitas"><a href="javascript:void(0)" id="item-cuci">RUANG CUCI JEMUR</a></div>
+                        <div class="containerLinks drop-item-fasilitas"><a href="javascript:void(0)" id="item-komunal">KOMUNAL</a></div>
+                        <div class="containerLinks drop-item-fasilitas"><a href="javascript:void(0)" id="item-sergun">RUANG SERBA GUNA</a></div>
+                        <div class="containerLinks drop-item-fasilitas"><a href="javascript:void(0)" id="item-dapur">RUANG DAPUR</a></div>
                     </div>
                 </li>
                 <li>
@@ -113,9 +123,9 @@
                         <p class="txtBiodatas txt1">Budi</p>
                         <p class="txtBiodatas txt2">Tabuti</p>
                         <p class="labelBiodatas label1">Tempat, tanggal lahir</p>
-                        <p class="labelBiodatas label2">Hobi</p>
+                        <p class="labelBiodatas label2">Gender</p>
                         <p class="txtBiodatas txt1">Jakarta, 18 April 1995</p>
-                        <p class="txtBiodatas txt2">Bulutangkis</p>
+                        <p class="txtBiodatas txt2">Laki-Laki</p>
                         <label for="nomorHP" class="labelBiodatas label1">Nomor HP</label>
                         <label for="email" class="labelBiodatas label2">Email</label>
                         <input type="text" class="txtBiodatas txt1 txt-box hide" placeholder="Enter your phone number" id="input-phone" name="phone">
@@ -149,7 +159,22 @@
                                     <p class="itemTitle">Peminjaman</p>
                                     <p class="itemDesc">Sergun</p>
                                 </div>
-                                <div class="containerButton"><button class="btnRecentMd btnCancel">Batal</button></div>
+                                <div class="containerButton">
+                                    <div class="btnRecentMd tanggalActivity"><p>21.00-23.00<br>2 Juni 2024</p></div>
+                                    <button class="btnRecentMd btnCancel">Batal</button>
+                                    <button class="btnRecentMd btnSelesai hide">Selesai</button>
+                                </div>
+                            </div>
+                            <div class="recentItem itemPeminjaman">
+                                <div class="detailItem">
+                                    <p class="itemTitle">Peminjaman</p>
+                                    <p class="itemDesc">Sergun</p>
+                                </div>
+                                <div class="containerButton">
+                                    <div class="btnRecentMd tanggalActivity"><p>18.00-20.00<br>25 Mei 2024</p></div>
+                                    <button class="btnRecentMd btnCancel">Batal</button>
+                                    <button class="btnRecentMd btnSelesai hide">Selesai</button>
+                                </div>
                             </div>
                             <div class="recentItem itemKerusakan">
                                 <div class="detailItem">
@@ -157,7 +182,39 @@
                                     <p class="itemDesc">Lampu kamar mandi</p>
                                 </div>
                                 <div class="containerButton">
-                                    <div class="btnRecentMd statusPerbaikan">Direncanakan</div>
+                                    <div class="btnRecentMd statusPerbaikan status-belum"></div>
+                                    <button class="btnRecentMd btnDetail">Follow Up</button>
+                                </div>
+                            </div>
+                            <div class="recentItem itemPeminjaman">
+                                <div class="detailItem">
+                                    <p class="itemTitle">Peminjaman</p>
+                                    <p class="itemDesc">Sergun</p>
+                                </div>
+                                <div class="containerButton">
+                                    <div class="btnRecentMd tanggalActivity"><p>19.00-21.00<br>22 Mei 2024</p></div>
+                                    <button class="btnRecentMd btnCancel">Batal</button>
+                                    <button class="btnRecentMd btnSelesai hide">Selesai</button>
+                                </div>
+                            </div>
+                            <div class="recentItem itemPeminjaman">
+                                <div class="detailItem">
+                                    <p class="itemTitle">Peminjaman</p>
+                                    <p class="itemDesc">Sergun</p>
+                                </div>
+                                <div class="containerButton">
+                                    <div class="btnRecentMd tanggalActivity"><p>22.00-23.00<br>21 Mei 2024</p></div>
+                                    <button class="btnRecentMd btnCancel hide">Batal</button>
+                                    <button class="btnRecentMd btnSelesai">Selesai</button>
+                                </div>
+                            </div>                       
+                            <div class="recentItem itemKerusakan">
+                                <div class="detailItem">
+                                    <p class="itemTitle">Laporan Kerusakan</p>
+                                    <p class="itemDesc">Lampu kamar mandi</p>
+                                </div>
+                                <div class="containerButton">
+                                    <div class="btnRecentMd statusPerbaikan status-dijadwalkan"><p>20 Mei 2024 | 12:00</p></div>
                                     <button class="btnRecentMd btnDetail">Follow Up</button>
                                 </div>
                             </div>
@@ -167,8 +224,8 @@
                                     <p class="itemDesc">Lampu kamar mandi</p>
                                 </div>
                                 <div class="containerButton">
-                                    <div class="btnRecentMd statusPerbaikan">Direncanakan</div>
-                                    <button class="btnRecentMd btnDetail">Follow Up</button>
+                                    <div class="btnRecentMd statusPerbaikan status-selesai">20 Februari 2024</div>
+                                    <button class="btnRecentMd btnSelesai">Selesai</button>
                                 </div>
                             </div>
                             <div class="recentItem itemKerusakan">
@@ -177,24 +234,33 @@
                                     <p class="itemDesc">Lampu kamar mandi</p>
                                 </div>
                                 <div class="containerButton">
-                                    <div class="btnRecentMd statusPerbaikan">Direncanakan</div>
-                                    <button class="btnRecentMd btnDetail">Follow Up</button>
+                                    <div class="btnRecentMd statusPerbaikan status-selesai">12 Januari 2024</div>
+                                    <button class="btnRecentMd btnSelesai">Selesai</button>
                                 </div>
                             </div>
-                            <div class="recentItem itemKerusakan">
-                                <div class="detailItem">
-                                    <p class="itemTitle">Laporan Kerusakan</p>
-                                    <p class="itemDesc">Lampu kamar mandi</p>
-                                </div>
-                                <div class="containerButton">
-                                    <div class="btnRecentMd statusPerbaikan">Direncanakan</div>
-                                    <button class="btnRecentMd btnDetail">Follow Up</button>
-                                </div>
+                        </div>
+                        <div class="containerLegend">
+                            <h5>Keterangan</h5>
+                            <div class="containerStatus">
+                                <div class="btnRecentMd statusPerbaikan status-belum"></div>
+                                <p>Belum Dijadwalkan</p>
+                            </div>
+                            <div class="containerStatus">
+                                <div class="btnRecentMd statusPerbaikan status-dijadwalkan"></div>
+                                <p>Dijadwalkan</p>
+                            </div>
+                            <div class="containerStatus">
+                                <div class="btnRecentMd statusPerbaikan status-selesai"></div>
+                                <p>Selesai</p>
+                            </div>
+                            <div class="containerStatus">
+                                <div class="btnRecentMd statusPerbaikan status-ditunda"></div>
+                                <p>Ditunda</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button class="btnMd btnLogout" id="btn-logout">Logout</button>
+                <button class="btnMd btnLogout" id="btn-logout" onclick="logout()">Logout</button>
             </div>
 
         </div>
@@ -203,7 +269,7 @@
     <!-- EDIT ADDRESS FORM -->
     <section class="editBiodata overlay-container" id="popupEditAdr">
         <div class="popup-box">
-            <h2>Request Edit Address</h2>
+            <h2>Permintaan Ganti Alamat</h2>
             <form action="" class="form-container container-grid">
                 <label for="provinsi" class="form-label labelBiodatas">Provinsi</label>
                 <label for="kota" class="form-label labelBiodatas">Kota/Kabupaten</label>
@@ -224,7 +290,7 @@
     </section>
     
     <!-- Cancel Peminjamann Pop Up -->
-    <div class="cancelPopUp">
+    <div class="cancelPopUp popUpPeminjaman">
         <div class="mainPopUp">
             <p>Apakah anda yakin ingin membatalkan peminjaman ini?</p>
             <div class="popUp-Selection">
@@ -235,6 +301,28 @@
                     <p>Tidak</p>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Cancel Form Request Address Pop Up -->
+    <div class="cancelPopUp popUpForm">
+        <div class="mainPopUp">
+            <p>Apakah anda yakin ingin membatalkan pengisian form?</p>
+            <div class="popUp-Selection">
+                <div class="popUpIya popSelect popForm">
+                    <p>Iya</p>
+                </div>
+                <div class="popUpTidak popSelect popForm">
+                    <p>Tidak</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PopUp Terkirim -->
+    <div class="popup">
+        <div class="popText">
+          <p>Terkirim</p>
         </div>
     </div>
 
