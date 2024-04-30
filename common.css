@@ -185,10 +185,14 @@ body{
     background-color: var(--lightAccentV2);
 }
 .btnDrop{
+    width: 20%;
     display: flex;
     align-items: center;
     background-color: transparent;
     border: none;
+}
+.btnDrop img{
+    width: 100%;
 }
 .containerDropdown{
     margin-top: 3%;
@@ -204,6 +208,21 @@ body{
     margin-bottom: 3%;
     width: 120%;
     justify-content: start;
+}
+@media (max-width: 1250px) {
+    .navBar li{
+        width: 14%;
+    }
+    .containerLinks{
+        width: 80%;
+    }
+    .navBar a{
+        width: 110%;
+        font-size: 20px;
+    }
+    .btnDrop img{
+        width: 95%;
+    }
 }
 
 /* HELP BUTTON */
@@ -257,7 +276,7 @@ body{
 .containerFooter h4{
     font-family: 'Truculenta';
     font-weight: normal;
-    font-size: 25px;
+    font-size: 18px;
 }
 .containerInFooter{
     display: flex;
@@ -266,11 +285,12 @@ body{
     gap: 10px;
 }
 .sosmedIcons{
-    height: 50px;
+    height: 40px;
 }
 .sosmedIcons img{
     width: 100%;
     height: 100%;
+    border-radius: 10px;
 }
 .conFirst{
     display: flex;
