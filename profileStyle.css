@@ -36,7 +36,8 @@ h3{
     height: auto;
     display: grid;
     gap: 2.5%;
-    grid-template-columns: 5fr 3fr;
+    /* grid-template-columns: 5fr 3fr; */
+    grid-template-columns: 6fr 4fr;
     grid-template-rows: 70px auto 40px;
 }
 .gridTitle{
@@ -59,7 +60,7 @@ h3{
     border-bottom: 2px solid black;
 }
 .partBiodata{
-    padding: 20px 5px 20px 5px;
+    padding: 20px 0px 20px 5px;
 }
 .partBiodata p{
     font-size: 23px;
@@ -112,6 +113,7 @@ h3{
 .personalGrid{
     height: 300px;
     display: grid;
+    width: 100%;
     /* grid-template-columns: 3fr 3fr 1fr; */
     grid-template-columns: 2fr 2fr 1fr;
     grid-template-rows: repeat(8, 1fr);
@@ -182,6 +184,7 @@ h3{
 }
 .addressGrid{
     height: 250px;
+    width: 100%;
     display: grid;
     grid-template-columns: 2fr 2fr 1fr;
     grid-template-rows: repeat(7, 1fr);
@@ -208,7 +211,7 @@ h3{
     padding: 20px;
     border-radius: 25px;
     overflow-y: hidden;
-    max-height: 50%;
+    height: 95%;
     font-family: 'Truculenta';
 }
 .containerRecent h4{
@@ -216,10 +219,11 @@ h3{
 }
 .containerItemRecent{
     border-top: 5px solid var(--lightAccentV3);
+    height: 600px;
     overflow-y: scroll;
 }
 .containerItemRecent::-webkit-scrollbar {
-    width: 0px; /* Width of the scrollbar */
+    width: 0px;
 }
 .recentItem{
     margin-top: 5px;
@@ -229,11 +233,15 @@ h3{
     display: flex;
     justify-content: space-between;
 }
-.recentItem p{
-    font-size: 25px;
-}
 .itemTitle{
+    font-size: 20px;
     font-weight: bold;
+}
+.itemDesc{
+    font-size: 22px !important;
+}
+.recentItem:last-child{
+    border-bottom: none;
 }
 .containerButton{
     display: flex;
@@ -252,6 +260,12 @@ h3{
     font-size: 15px;
     transition: all ease-in-out 0.25s;
 }
+.tanggalActivity{
+    width: 150px;
+    text-align: right;
+    font-size: 15px;
+    font-weight: bold;
+}
 .btnCancel{
     border: 2px solid red;
     background-color: white;
@@ -262,14 +276,36 @@ h3{
 }
 .statusPerbaikan{
     text-align: center;
-    background-color: greenyellow;
     box-shadow: 
     0 1px 5px #fff, /*bottom external highlight*/
+    0 -1px 5px #fff, /*top external highlight*/
     inset 0 -1px 2px rgba(0,0,0,0.5), /*bottom internal shadow*/ 
     inset 0 1px 2px rgba(255,255,255,0.8); /*top internal highlight*/
-    width: auto;
+    width: 0px;
     font-size: 20px;
     font-weight: bold;
+}
+.status-selesai{
+    background-color: greenyellow;
+    width: auto;
+    font-size: 16px;
+}
+.status-dijadwalkan{
+    background-color: rgb(235, 255, 51);
+    width: auto;
+    font-size: 16px;
+}
+.status-ditunda{
+    background-color: rgb(237, 103, 19);
+    width: auto;
+    font-size: 16px;
+}
+.status-belum{
+    background-color: rgb(171, 7, 7);
+}
+.status-tanggal{
+    width: auto;
+    font-size: 16px;
 }
 .btnDetail{
     border: 2px solid var(--lightAccentV3);
@@ -277,6 +313,11 @@ h3{
     cursor: pointer;
 }
 .btnDetail:hover{
+    background-color: var(--lightAccentV3);
+    color: white;
+}
+.btnSelesai{
+    border: 2px solid var(--lightAccentV3);
     background-color: var(--lightAccentV3);
     color: white;
 }
@@ -315,4 +356,18 @@ h3{
 }
 .errorBox{
     border: 2px solid red;
+}
+.containerLegend{
+    display: flex;
+    border-top: 5px solid var(--lightAccentV3);
+    flex-direction: column;
+}
+.containerLegend h5{
+    font-size: 22px;
+}
+.containerStatus{
+    display: flex;
+    padding: 1px 3px;
+    align-items: center;
+    column-gap: 5px;
 }
